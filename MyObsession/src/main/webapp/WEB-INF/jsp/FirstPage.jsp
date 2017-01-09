@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <title>Bootstrap Case</title>
+  <title>MyObsession</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,7 +51,7 @@
       <li><a href="#">Skin</a></li>
       <li><a href="#">Hair</a></li>
       <li><a href="#">Bath&Body</a></li>
-      <li><a href="#">Fragrance</a></li>
+      <li><a href=" #">Fragrance</a></li>
       </ul>
       </li>
       <li class="dropdown">
@@ -69,6 +69,7 @@
       <li><a href="#">Offers</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+    <li><a href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
       <li><a href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
       <li><a href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
     </ul>

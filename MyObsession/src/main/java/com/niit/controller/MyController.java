@@ -56,6 +56,7 @@ public class MyController {
 	@RequestMapping("/register")
 	public ModelAndView ModelAndView (@ModelAttribute User u)
 	{
+		
 		userDAOImpl.save(u);
 		return new ModelAndView("Login","msg","Registration Successful! Login to Continue.");
 	}
