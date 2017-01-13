@@ -13,7 +13,16 @@ import com.niit.model.Product;
 @Controller
 public class ProductController {
 
+
 	ProductDAOImpl  productDAOImpl=new ProductDAOImpl();
+	
+	@RequestMapping("/addP")
+	public ModelAndView addP()
+	{
+		ModelAndView mv= new ModelAndView("AddProduct");
+		return mv;
+	}
+	
 	
 	@RequestMapping("/addproduct")
 	public ModelAndView addProduct(@ModelAttribute Product p)
@@ -33,5 +42,7 @@ public class ProductController {
 		mv.addObject("List", l);
 		return mv;
 	}
+	
+	
 	
 }

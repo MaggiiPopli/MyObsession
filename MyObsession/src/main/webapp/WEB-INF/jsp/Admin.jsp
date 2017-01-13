@@ -17,8 +17,8 @@ body
 </head>
 <body>
 <form action="admin">
-<a href="addproduct">Add Product</a>
-<a href="viewproduct">View Product</a>
+<a href="addP">Add Product</a>
+<a href="viewP">View Product</a>
  
 </form>
 </body>

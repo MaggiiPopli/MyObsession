@@ -131,7 +131,7 @@ ${msg}
             <div class="wrap">
                 <p class="form-title">
                     Add Product</p>
-                <form class="login" action="/addproduct">
+                <form class="login" action="addproduct">
                <input type="text" name="product_id" placeholder="Product ID" />
                 <input type="text" name="name" placeholder="Product Name" />
                 <input type="text" name="brand" placeholder="Brand" />
