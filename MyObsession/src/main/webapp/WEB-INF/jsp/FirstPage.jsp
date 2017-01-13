@@ -73,7 +73,7 @@
       <li><a href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
       <li><a href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
     </ul>
-  </div>
+    </div>
 </nav>
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -86,12 +86,16 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="http://www.nykaa.com/media/wysiwyg/dec_Sincare_DesktopHPBanner.jpg" alt=>
+        <img src="http://www.nykaa.com/media/wysiwyg/Loreal_Artistry_Hp_Sliding_Banner_G7.png" alt=>
               
       </div>
 
       <div class="item">
         <img src="http://www.nykaa.com/media/wysiwyg/NYX_HpSlidingBanner_V8.jpg" alt=>
+              
+      </div>
+      <div class="item">
+        <img src="http://www.nykaa.com/media/wysiwyg/Maybelline_HpSlidingBanner_R4.jpg" alt=>
               
       </div>
     </div>

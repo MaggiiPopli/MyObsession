@@ -9,7 +9,7 @@
 <style>
 body
 {
-    background: url('http://www.walldevil.com/wallpapers/a73/shopping.jpg')no-repeat center fixed;
+    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -132,8 +132,8 @@ ${msg}
                 <p class="form-title">
                     Welcome To MyObsession</p>
                 <form class="login" action="login1">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
+                <input type="text" name="username" placeholder="Username" />
+                <input type="password" name="password" placeholder="Password" />
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
                 <div class="remember-forgot">
                     <div class="row">

@@ -14,11 +14,11 @@ public class User {
 	private String password;
 	private String name;
 	private String contact;
-	private String  email;
+	private String email;
 	private String gender;
 	private String address;
 	private String role;
-	private boolean enabled;
+	private boolean enabled; 
 
 	public String getUsername() {
 		return username;

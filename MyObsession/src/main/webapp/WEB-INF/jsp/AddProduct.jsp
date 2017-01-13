@@ -130,18 +130,14 @@ ${msg}
     
             <div class="wrap">
                 <p class="form-title">
-                    Welcome To MyObsession</p>
-                <form class="login" action="register">
-                <input type="text" name="name" placeholder="Name" />
-                <input type="text" name="username" placeholder="Username" />
-                <input type="text" name="email" placeholder="Email" />
-                <input type = "radio" name = "gender" value = "Male">Male&nbsp;
-				<input type = "radio" name = "gender" value = "Female">Female
-				<input type = "radio"  name = "gender" value = "Other">Other
-                <input type="password" name="password" placeholder="Password" />
-                <input type="text" name="contact" placeholder="Contact"/>
-                <input type = "text" name ="address" placeholder="Address"/>
-				<input type="submit" value="Register" class="btn btn-success btn-sm" />
+                    Add Product</p>
+                <form class="login" action="/addproduct">
+               <input type="text" name="product_id" placeholder="Product ID" />
+                <input type="text" name="name" placeholder="Product Name" />
+                <input type="text" name="brand" placeholder="Brand" />
+                <input type="text" name="price" placeholder="Product Price"/>
+                <input type = "text" name ="description" placeholder="Description"/>
+				<input type="submit" value="Add" class="btn btn-success btn-sm" />
                           </form>
             </div>
         </div>

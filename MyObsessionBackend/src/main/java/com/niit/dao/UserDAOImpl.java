@@ -16,19 +16,33 @@ import com.niit.model.User;
 public class UserDAOImpl implements UserDAO{
 	
 	@Autowired
-	SessionFactory sessionFactory;
+	SessionFactory sessionFactory; 
+	
+	public UserDAOImpl()
+	{
+		
+	}
+	
+	/*
+	public UserDAOImpl(SessionFactory sessionFactory)
+	{
+		this.sessionFactory=sessionFactory;
+		
+	}*/
 	
 	public Session getSession()
 	{
-		return sessionFactory.getCurrentSession();
+		return sessionFactory.getCurrentSession();	
 		
 	}
-
+	
+	
 	public boolean validate(String username, String password) {
 		// TODO Auto-generated method stub
 		String hql="from User where username=:username and password=:password";
 		System.out.println("test2");
-		Query q=getSession().createQuery(hql);
+		Session sess=getSession();
+		Query q=sess.createQuery(hql);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
 	
@@ -46,10 +60,10 @@ public class UserDAOImpl implements UserDAO{
 
 	public void save(User u) {
 		// TODO Auto-generated method stub
-		Session sess=getSession();
+		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		System.out.println("user data"+u);
-		sess.save(u);
+		sess.persist(u);
 		tx.commit();
 		sess.close();
 	}

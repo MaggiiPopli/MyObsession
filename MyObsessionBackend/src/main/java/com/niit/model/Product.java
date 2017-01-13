@@ -11,17 +11,17 @@ import org.springframework.stereotype.Component;
 public class Product {
 	
 	@Id
-	private String id;
+	private String product_id;
 	private String name;
 	private String brand;
 	private String price;
 	private String description;
 	
-	public String getId() {
-		return id;
+	public String getProduct_id() {
+		return product_id;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setProduct_id(String id) {
+		this.product_id = id;
 	}
 	public String getName() {
 		return name;

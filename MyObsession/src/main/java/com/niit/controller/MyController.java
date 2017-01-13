@@ -2,11 +2,11 @@ package com.niit.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
 
 import com.niit.dao.UserDAOImpl;
 import com.niit.model.User;
@@ -16,6 +16,7 @@ public class MyController {
 	
 	
 	UserDAOImpl userDAOImpl=new UserDAOImpl();
+	
 	
 	@RequestMapping("/")
 	public ModelAndView firstPage()
@@ -33,6 +34,12 @@ public class MyController {
 	public ModelAndView register()
 	{
 		ModelAndView mv= new ModelAndView("Register");
+		return mv;
+	}
+	@RequestMapping("/admin")
+	public ModelAndView admin()
+	{
+		ModelAndView mv= new ModelAndView("Admin");
 		return mv;
 	}
 
@@ -56,7 +63,7 @@ public class MyController {
 	@RequestMapping("/register")
 	public ModelAndView ModelAndView (@ModelAttribute User u)
 	{
-		
+		System.out.println("inside register controller "+u);
 		userDAOImpl.save(u);
 		return new ModelAndView("Login","msg","Registration Successful! Login to Continue.");
 	}
