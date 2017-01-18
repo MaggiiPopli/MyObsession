@@ -18,31 +18,26 @@ public class UserDAOImpl implements UserDAO{
 	@Autowired
 	SessionFactory sessionFactory; 
 	
-	public UserDAOImpl()
-	{
-		
-	}
 	
-	/*
 	public UserDAOImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 		
-	}*/
+	}
 	
-	public Session getSession()
+	/*public Session getSession()
 	{
 		return sessionFactory.getCurrentSession();	
 		
-	}
+	}*/
 	
 	
 	public boolean validate(String username, String password) {
 		// TODO Auto-generated method stub
 		String hql="from User where username=:username and password=:password";
 		System.out.println("test2");
-		Session sess=getSession();
-		Query q=sess.createQuery(hql);
+		//Session sess=sessionFactory.getCurrentSession().
+		Query q=sessionFactory.getCurrentSession().createQuery(hql);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
 	

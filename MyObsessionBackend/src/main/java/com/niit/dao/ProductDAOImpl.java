@@ -7,58 +7,59 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.niit.model.Product;
 
+@Repository
 public class ProductDAOImpl implements ProductDAO{
   
 	@Autowired
 	SessionFactory sessionFactory; 
 	
-	public ProductDAOImpl()
-	{
-		
-	}
 	
 	public ProductDAOImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 		
-	}
+	} 
 	
-	public Session getSession()
+	/*public Session getSession()
 	{
 		return sessionFactory.openSession();
 		
-	}
+	}*/
 
 	public List<Product> viewProduct() {
 		// TODO Auto-generated method stub
-		Session sess=getSession();
+		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		String hql="from Product";
-		Query q=sess.createQuery(hql);
+		System.out.println("After from product");
+	  Query q=sess.createQuery(hql);
 		
 		List<Product> l=q.list();
+		System.out.println("LIST PRODUCT"+l);
+		
 		return l;
 	
 	}
 
 	public void saveProduct(Product p) {
 		// TODO Auto-generated method stub
-		Session sess=getSession();
+		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		sess.save(p);
 		tx.commit();
-		sess.close();
+		//sess.close();
 		
 	}
 
 	public void editProduct(String product_id) {
 		// TODO Auto-generated method stub
-		Session sess=getSession();
+		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
-		Product p=sess.get(Product.class, product_id);
+		Product p=(Product) sess.get(Product.class, product_id);
 		sess.update(p);
 		tx.commit();
 		sess.close();
@@ -66,9 +67,9 @@ public class ProductDAOImpl implements ProductDAO{
 
 	public void deleteProduct(String product_id) {
 		// TODO Auto-generated method stub
-		Session sess=getSession();
+		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
-		Product p=sess.get(Product.class, product_id);
+		Product p=(Product) sess.get(Product.class, product_id);
 		sess.delete(p);
 		tx.commit();
 		sess.close();

@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Component
-@Entity
+@Entity 
 public class User {
 	
 	@Id

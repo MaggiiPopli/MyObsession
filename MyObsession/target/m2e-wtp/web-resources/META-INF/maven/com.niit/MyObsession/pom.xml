@@ -42,12 +42,15 @@
     <version>4.3.1.RELEASE</version>
 </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.1.0.Final</version>
+    <version>4.3.1.Final</version>
 </dependency>
+
+
+
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -61,6 +64,13 @@
     <artifactId>persistence-api</artifactId>
     <version>1.0.2</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>javax.persistence</artifactId>
+    <version>2.1.0</version>
+</dependency>
+
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -81,10 +91,23 @@
   
 </dependency>
     <!-- https://mvnrepository.com/artifact/jstl/jstl -->
-<dependency>
+<dependency> 
     <groupId>jstl</groupId>
     <artifactId>jstl</artifactId>
     <version>1.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.8.9</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>4.2.5.RELEASE</version>
 </dependency>
     
   </dependencies> 

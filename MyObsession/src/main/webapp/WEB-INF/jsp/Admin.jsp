@@ -17,8 +17,16 @@ body
 </head>
 <body>
 <form action="admin">
-<a href="addP">Add Product</a>
+<a href="addP">Add Product</a><br>
 <a href="viewP">View Product</a>
+<br>
+<br>
+<a href="addC">Add Category</a><br>
+<a href="viewC">View Category</a>
+<br> 
+<br>
+<a href="addS">Add Supplier</a><br>
+<a href="viewS">View Supplier</a>
  
 </form>
 </body>

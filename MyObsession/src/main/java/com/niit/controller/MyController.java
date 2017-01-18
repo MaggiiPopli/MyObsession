@@ -2,6 +2,7 @@ package com.niit.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +13,13 @@ import com.niit.dao.UserDAOImpl;
 import com.niit.model.User;
 
 @Controller
-public class MyController {
+public class MyController { 
 	
 	
-	UserDAOImpl userDAOImpl=new UserDAOImpl();
+	//UserDAOImpl userDAOImpl=new UserDAOImpl();
+	
+	@Autowired
+	UserDAOImpl userDAOImpl;
 	
 	
 	@RequestMapping("/")
@@ -53,7 +57,7 @@ public class MyController {
 		boolean x=userDAOImpl.validate(username, password);
 		if(x)
 		{
-			return new ModelAndView("home","msg", "Welcome to the Home Page!");
+			return new ModelAndView("home","msg","Welcome to the Home Page!");
 		}
 		else
 		{
@@ -64,6 +68,9 @@ public class MyController {
 	public ModelAndView ModelAndView (@ModelAttribute User u)
 	{
 		System.out.println("inside register controller "+u);
+		u.setRole("role_user");
+		u.setEnabled(true);
+		
 		userDAOImpl.save(u);
 		return new ModelAndView("Login","msg","Registration Successful! Login to Continue.");
 	}

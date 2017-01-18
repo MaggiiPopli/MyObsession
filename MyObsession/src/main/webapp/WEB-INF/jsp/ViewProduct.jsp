@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>View Product</title>
 </head>
 <body>
-<form action="/view">
+<form action="viewproduct">
 <table>
-<th>Product ID</th>
-<th>Product Name</th>
+<th>Product_ID</th>
+<th>Product_Name</th>
 <th>Brand</th>
 <th>Price</th>
 <th>Description</th>
@@ -23,6 +23,9 @@
 <td>${x.brand}</td>
 <td>${x.price}</td>
 <td>${x.description}</td>
+<td><a href="edit/${x.product_id}">Edit</a></td>
+<td><a href="delete/${x.product_id}">Delete</a></td> 
+</tr>
 </c:forEach>
 </table>
 </form>

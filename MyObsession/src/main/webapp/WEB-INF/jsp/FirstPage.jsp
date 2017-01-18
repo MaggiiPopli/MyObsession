@@ -7,17 +7,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 <style>
+body
+{
+	background: url('https://stephanywathey.files.wordpress.com/2016/05/light-pink-floral-background-tumblr-wallpapers-for-vintage-backgrounds-tumblr-pink-pic.jpg')no-repeat fixed;
+	
+}
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
-      margin-bottom: 0;
+      margin-bottom: 5;
       border-radius: 0;
+     background: url('http://previews.123rf.com/images/hamsterman/hamsterman1105/hamsterman110500031/9452603-Set-of-broken-multicolor-eye-shadow-background-macro-Stock-Photo.jpg')no-repeat center fixed;
     }
+    
     
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
       padding: 25px;
     }
+    
     
   .carousel-inner img {
       width: 100%; /* Set width to 100% */
@@ -39,12 +47,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">MyObsession</a>
+      <a class="navbar-brand" style="color:white" href="#">MyObsession</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a style="color:white" href="#">Home</a></li>
       <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
+      <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Category
       <span class="caret"></span></a>
       <ul class="dropdown-menu"> 
       <li><a href="#">MakeUp</a></li>
@@ -55,23 +63,23 @@
       </ul>
       </li>
       <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Brand
+      <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Brand
       <span class="caret"></span></a>
       <ul class="dropdown-menu">
-      <li><a href="#">MAC</a></li>
-      <li><a href="#">ColourBar</a></li>
-      <li><a href="#">Loreal Paris</a></li>
-      <li><a href="#">NYX Professional</a></li>
-      <li><a href="#">Revelon</a></li>
-      <li><a href="#">INGLOT</a></li>
+      <li><a href="#"><img src="http://2.bp.blogspot.com/-8YZdogfwCNw/Up5-wmVh59I/AAAAAAAAAMg/x9f8w58ZgPs/s1600/maccosmetics.gif" style="width: 80%;height: 15%"></a></li>
+      <li><a href="#"><img src="http://d24ozl8t5dfde2.cloudfront.net/image/data/logo/colorbar_logo.JPG" style="width: 80%;height: 15%"></a></li>
+      <li><a href="#"><img src="https://d3nr84omjz8945.cloudfront.net/images/products/loreal_paris/logo/1.jpg" style="width: 80%;height: 15%"></a></li>
+      <li><a href="#"><img src="http://www.joancorner.com/image/cache/data/test/NYX_logo-250x250.jpg" style="width: 80%;height: 15%"></a></li>
+      <li><a href="#"><img src="http://logos-download.com/wp-content/uploads/2016/02/Revlon_logo_small.png" style="width: 80%;height: 15%"></a></li>
+      <li><a href="#"><img src="http://www.firstbeauty.com.sg/wp-content/uploads/2014/10/INGLOT-logo-small.jpg" style="width: 80%;height: 15%"></a></li>
       </ul>
       </li>
-      <li><a href="#">Offers</a></li>
+      <li><a style="color:white" href="#">Offers</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <li><a href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
-      <li><a href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
-      <li><a href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
+    <li><a style="color:white" href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+      <li><a style="color:white" href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
+      <li><a style="color:white" href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
     </ul>
     </div>
 </nav>
@@ -118,14 +126,14 @@
    
   <div class="row">
   	<div class="col-sm-4">
-      <img src="http://images.locanto.in/1325214300/Colorbar-Exclusive-offer-in-all-Cosmetic-Products_1.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="http://images.locanto.in/1325214300/Colorbar-Exclusive-offer-in-all-Cosmetic-Products_1.jpg" class="img-responsive" style="width:100%;height:50%" alt="Image">
       
     </div>
     <div class="col-sm-4"> 
-      <img src="http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Homepage/Brand%20Treatments/Maybelline/2016/June%20/Blushed_Nudes_360x170px/162006631_Amended.jpg" style="width:100%" alt="Image">    
+      <img src="http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Homepage/Brand%20Treatments/Maybelline/2016/June%20/Blushed_Nudes_360x170px/162006631_Amended.jpg" style="width:100%; height:50%" alt="Image">    
     </div>
     <div class="col-sm-4">
-      <img src= "http://angelajonsson.com/wp-content/uploads/2014/06/angelajonsson-lakme-ad-2014.jpg" class="image-responsive" style="width:100%" alt="image">
+      <img src= "http://angelajonsson.com/wp-content/uploads/2014/06/angelajonsson-lakme-ad-2014.jpg" class="image-responsive" style="width:100%;height:50%" alt="image">
       </div>
       
 
@@ -144,7 +152,7 @@
 
 <a href="#" target="_blank" class="img-tile">
 <img src="http://www.nykaa.com/media/wysiwyg/Join-The-Glitter-Gang.jpg" alt=""></a>
-        
+         
 <a href="#" target="_blank" class="img-tile">
 <img src="http://www.nykaa.com/media/wysiwyg/Join-The-Matte-Revolution.jpg" alt=""></a>
         
