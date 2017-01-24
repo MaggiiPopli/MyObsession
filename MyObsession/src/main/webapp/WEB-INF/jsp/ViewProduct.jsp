@@ -10,21 +10,23 @@
 </head>
 <body>
 <form action="viewproduct">
-<table>
+<table border="1">
 <th>Product_ID</th>
 <th>Product_Name</th>
 <th>Brand</th>
 <th>Price</th>
 <th>Description</th>
-<c:forEach var="x" items="${list}">
+<th>Edit</th>
+<th>Delete</th>
+<c:forEach var="x" items="${List}">
 <tr>
 <td>${x.product_id}</td>
 <td>${x.name}</td>
 <td>${x.brand}</td>
 <td>${x.price}</td>
 <td>${x.description}</td>
-<td><a href="edit/${x.product_id}">Edit</a></td>
-<td><a href="delete/${x.product_id}">Delete</a></td> 
+<td><a href="editP/${x.product_id}">Edit</a></td>
+<td><a href="deleteP/${x.product_id}">Delete</a></td> 
 </tr>
 </c:forEach>
 </table>

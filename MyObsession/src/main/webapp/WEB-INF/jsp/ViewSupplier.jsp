@@ -10,17 +10,19 @@
 </head>
 <body>
 <form action="viewsupplier">
-<table>
+<table border="1">
 <th>Supplier ID</th>
 <th>Supplier Name</th>
 <th>Supplier Address</th>
-<c:forEach var="x" items="${list}">
+<th>Edit</th>
+<th>Delete</th>
+<c:forEach var="x" items="${List}">
 <tr>
 <td>${x.supplier_id}</td>
 <td>${x.supplier_name}</td>
 <td>${x.supplier_address}</td>
-<td><a href="Edit/${x.supplier_id}">Edit</a></td>
-<td><a href="Delete/${x.supplier_id}">Delete</a></td> 
+<td><a href="edit/${x.supplier_id}">Edit</a></td>
+<td><a href="delete/${x.supplier_id}">Delete</a></td> 
 </c:forEach>
 </table>
 </form>

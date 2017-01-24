@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@page isELIgnored="false" %>
-    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="F"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="F"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -130,15 +130,14 @@ form.login a:hover
     
             <div class="wrap">
                 <p class="form-title">
-                    Add Product</p>
-                <F:form class="login" action="addproduct" method="post" enctype="multipart/form-data">
-               <F:input path="product_id" placeholder="Product ID" />
+                    Edit Product</p>
+                <F:form class="login" action="editproduct">
+               <F:hidden path="product_id" placeholder="Product ID" />
                 <F:input path="name" placeholder="Product Name" />
-                <F:input path="brand" placeholder="Brand" />
-                <F:input path="price" placeholder="Product Price"/>
-                <F:input path="description" placeholder="Description"/>
-                Add Image:<input type="file" name="file"/>
-				<input type="submit" value="Add" class="btn btn-success btn-sm" />
+                <F:input path="brand"  placeholder="Brand" />
+                <F:input path="price"  placeholder="Product Price"/>
+                <F:input path ="description" placeholder="Description"/>
+				<input type="submit" value="SaveEdit" class="btn btn-success btn-sm" />
                           </F:form>
             </div>
         </div>

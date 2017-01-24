@@ -83,7 +83,7 @@ body
     </ul>
     </div>
 </nav>
-  
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -118,6 +118,7 @@ body
       <span class="sr-only">Next</span>
     </a>
 </div>
+
   
 <div class="container text-center">  
 <div class="add-tiles">

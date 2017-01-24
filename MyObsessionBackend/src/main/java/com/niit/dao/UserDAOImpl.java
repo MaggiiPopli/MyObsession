@@ -37,7 +37,7 @@ public class UserDAOImpl implements UserDAO{
 		String hql="from User where username=:username and password=:password";
 		System.out.println("test2");
 		//Session sess=sessionFactory.getCurrentSession().
-		Query q=sessionFactory.getCurrentSession().createQuery(hql);
+		Query q=sessionFactory.openSession().createQuery(hql);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
 	

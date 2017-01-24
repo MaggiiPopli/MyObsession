@@ -76,4 +76,21 @@ public class ProductDAOImpl implements ProductDAO{
 
 	}
 
+	public Product getProductById(String product_id) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Product p=(Product)sess.get(Product.class, product_id);
+		System.out.println("get id by product"+p);
+		return p;
+	}
+
+	public void updateProduct(Product p) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		sess.update(p);
+		tx.commit();
+		sess.close();
+	}
+
  }

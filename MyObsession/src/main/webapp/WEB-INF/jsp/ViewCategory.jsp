@@ -10,17 +10,19 @@
 </head>
 <body>
 <form action="viewcategory">
-<table>
+<table border="1">
 <th>Category ID</th>
 <th>Category Name</th>
 <th>Category Description</th>
-<c:forEach var="x" items="${list}">
+<th>Edit</th>
+<th>Delete</th>
+<c:forEach var="x" items="${List}">
 <tr>
 <td>${x.category_id}</td>
 <td>${x.name}</td>
 <td>${x.description}</td>
-<td><a href="Edit/${x.category_id}">Edit</a></td>
-<td><a href="Delete/${x.category_id}">Delete</a></td> 
+<td><a href="edit/${x.category_id}">Edit</a></td>
+<td><a href="delete/${x.category_id}">Delete</a></td> 
 </tr>
 </c:forEach>
 </table>
