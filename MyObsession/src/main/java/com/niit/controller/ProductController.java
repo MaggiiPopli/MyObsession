@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.niit.dao.ProductDAOImpl;
 import com.niit.model.Product;
 
@@ -32,12 +33,25 @@ public class ProductController {
 		ModelAndView mv= new ModelAndView("AddProduct","command",new Product());
 		return mv;
 	}
+	
+	@RequestMapping("/product")
+	public ModelAndView displayProducts()
+	{
+		ModelAndView mv= new ModelAndView("product");
+		List<Product> list=productDAOImpl.viewProduct();
+		Gson g=new Gson();
+		String str=g.toJson(list);
+		System.out.println("JSON DATA IS "+str);
+		mv.addObject("pr",str);
+		return mv;
+	}
 	 
 	@RequestMapping(value="/addproduct",method=RequestMethod.POST)
 	public ModelAndView addProduct(@ModelAttribute Product p)
 	{
 		String filename=null; //image file name
 		byte[] bytes;
+		System.out.println("Get Image"+p);
 		if(!p.getImage().isEmpty())
 			try {
 				bytes=p.getImage().getBytes();
@@ -72,7 +86,7 @@ public class ProductController {
 	{
 		/*productDAOImpl.editProduct(product_id);
 		ModelAndView mv= new ModelAndView("redirect:/viewP");
-		return mv;*/
+		return mv;*/ 
 		Product p= productDAOImpl.getProductById(product_id);
 		System.out.println("EDIT PRODUCT "+p);
 		return new ModelAndView("EditProduct","command",p);
@@ -81,12 +95,13 @@ public class ProductController {
 	@RequestMapping("/editproduct")
 	public ModelAndView editSave(@ModelAttribute Product p)
 	{
+		System.out.println("INSIDE EDIT SAVE");
 	 	productDAOImpl.updateProduct(p);
-		System.out.println("EditSave");
-		return new ModelAndView("redirect/:viewP");	
+		System.out.println("EditSave"+p);
+		return new ModelAndView("redirect:/viewP");	
 	}	
 	
-	@RequestMapping("/delete/{product_id}")
+	@RequestMapping("/deleteP/{product_id}")
 	public ModelAndView delete(@PathVariable String product_id)
 	{
 		productDAOImpl.deleteProduct(product_id);

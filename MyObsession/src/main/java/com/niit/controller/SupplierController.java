@@ -22,7 +22,7 @@ public class SupplierController {
 	@RequestMapping("/addS")
 	public ModelAndView addS()
 	{
-		ModelAndView mv= new ModelAndView("AddSupplier");
+		ModelAndView mv= new ModelAndView("AddSupplier","command",new Supplier());
 		return mv;
 	}
 	 
@@ -45,20 +45,28 @@ public class SupplierController {
 		
 	}
 	
-	@RequestMapping("/edit/{supplier_id}")
+	@RequestMapping("/editS/{supplier_id}")
 	public ModelAndView edit(@PathVariable String supplier_id)
 	{
-		supplierDAOImpl.editSupplier(supplier_id);
-		ModelAndView mv= new ModelAndView("redirect:/viewS");
-		return mv;
+		Supplier s=supplierDAOImpl.getSupplierById(supplier_id);
+		return new ModelAndView("EditSupplier","command",s);
+
 	}
 	
-	@RequestMapping("/edit/{supplier_id}")
+	@RequestMapping("/editsupplier")
+	public ModelAndView editSave(@ModelAttribute Supplier s)
+	{
+	 	supplierDAOImpl.updateSupplier(s);
+		System.out.println("EditSave");
+		return new ModelAndView("redirect:/viewS");	
+	}
+	
+	@RequestMapping("/deleteS/{supplier_id}")
 	public ModelAndView delete(@PathVariable String supplier_id)
 	{
 		supplierDAOImpl.deleteSupplier(supplier_id);
-		ModelAndView mv= new ModelAndView("redirect:/viewS");
-		return mv;
+		return new ModelAndView("redirect:/viewS");
+		
 	}
 	
 

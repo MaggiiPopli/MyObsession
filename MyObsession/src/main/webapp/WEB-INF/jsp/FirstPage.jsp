@@ -54,16 +54,16 @@ body
       <li class="dropdown">
       <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Category
       <span class="caret"></span></a>
-      <ul class="dropdown-menu"> 
-      <li><a href="#">MakeUp</a></li>
+      <ul class="dropdown-menu">  
+      <li><a href="product">MakeUp</a></li>
       <li><a href="#">Skin</a></li>
       <li><a href="#">Hair</a></li>
       <li><a href="#">Bath&Body</a></li>
-      <li><a href=" #">Fragrance</a></li>
+      <li><a href="#">Fragrance</a></li>
       </ul>
       </li>
       <li class="dropdown">
-      <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Brand
+        <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Brand
       <span class="caret"></span></a>
       <ul class="dropdown-menu">
       <li><a href="#"><img src="http://2.bp.blogspot.com/-8YZdogfwCNw/Up5-wmVh59I/AAAAAAAAAMg/x9f8w58ZgPs/s1600/maccosmetics.gif" style="width: 80%;height: 15%"></a></li>

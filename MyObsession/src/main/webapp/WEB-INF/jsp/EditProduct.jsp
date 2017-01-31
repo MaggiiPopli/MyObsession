@@ -131,7 +131,7 @@ form.login a:hover
             <div class="wrap">
                 <p class="form-title">
                     Edit Product</p>
-                <F:form class="login" action="editproduct">
+                <F:form class="login" action="/MyObsession/editproduct">
                <F:hidden path="product_id" placeholder="Product ID" />
                 <F:input path="name" placeholder="Product Name" />
                 <F:input path="brand"  placeholder="Brand" />

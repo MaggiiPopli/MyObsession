@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@page isELIgnored="false" %>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="F"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -125,18 +126,17 @@ form.login a:hover
 </style>
 </head>
 <body>
-${msg}
 <div class="container">
     
             <div class="wrap">
                 <p class="form-title">
                     Add Supplier</p>
-                <form class="login" action="addsupplier">
-               <input type="text" name="supplier_id" placeholder="Supplier ID" />
-                <input type="text" name="supplier_name" placeholder="Supplier Name" />
-               <input type = "text" name ="supplier_address" placeholder="Address"/>
+                <F:form class="login" action="addsupplier">
+               <F:input path="supplier_id" placeholder="Supplier ID" />
+                <F:input path="supplier_name" placeholder="Supplier Name" />
+                <F:input path="supplier_address" placeholder="Address"/>
 				<input type="submit" value="Add" class="btn btn-success btn-sm" />
-                          </form>
+                          </F:form>
             </div>
         </div>
 </body>

@@ -137,7 +137,7 @@ form.login a:hover
                 <F:input path="brand" placeholder="Brand" />
                 <F:input path="price" placeholder="Product Price"/>
                 <F:input path="description" placeholder="Description"/>
-                Add Image:<input type="file" name="file"/>
+                Add Image:<input type="file" name="image"/>
 				<input type="submit" value="Add" class="btn btn-success btn-sm" />
                           </F:form>
             </div>

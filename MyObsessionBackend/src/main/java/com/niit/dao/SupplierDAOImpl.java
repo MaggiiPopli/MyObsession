@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.niit.model.Product;
 import com.niit.model.Supplier;
 
 @Repository
@@ -75,6 +76,23 @@ public class SupplierDAOImpl implements SupplierDAO{
 		sess.delete(s);
 		tx.commit();
 		sess.close();
+	}
+
+	public Supplier getSupplierById(String supplier_id) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Supplier s=(Supplier) sess.get(Supplier.class, supplier_id);
+		return s;
+	}
+
+	public void updateSupplier(Supplier s) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		sess.update(s);
+		tx.commit();
+		sess.close();
+
 	}
 
 }

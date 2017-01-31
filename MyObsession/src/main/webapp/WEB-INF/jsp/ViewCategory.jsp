@@ -19,10 +19,10 @@
 <c:forEach var="x" items="${List}">
 <tr>
 <td>${x.category_id}</td>
-<td>${x.name}</td>
-<td>${x.description}</td>
-<td><a href="edit/${x.category_id}">Edit</a></td>
-<td><a href="delete/${x.category_id}">Delete</a></td> 
+<td>${x.category_name}</td>
+<td>${x.category_description}</td>
+<td><a href="editC/${x.category_id}">Edit</a></td>
+<td><a href="deleteC/${x.category_id}">Delete</a></td> 
 </tr>
 </c:forEach>
 </table>

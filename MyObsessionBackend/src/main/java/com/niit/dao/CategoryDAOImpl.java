@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.model.Category;
+import com.niit.model.Product;
 
 @Repository
 public class CategoryDAOImpl implements CategoryDAO{
@@ -71,6 +72,22 @@ public class CategoryDAOImpl implements CategoryDAO{
 		Transaction tx=sess.beginTransaction();
 		Category c=(Category) sess.get(Category.class, category_id);
 		sess.delete(c);
+		tx.commit();
+		sess.close();
+	}
+
+	public Category getCategoryById(String category_id) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Category c=(Category) sess.get(Category.class,category_id);
+		return c;
+	}
+
+	public void updateCategory(Category c) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		sess.update(c);
 		tx.commit();
 		sess.close();
 	}

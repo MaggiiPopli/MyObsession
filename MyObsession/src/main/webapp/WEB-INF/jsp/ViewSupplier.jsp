@@ -21,8 +21,8 @@
 <td>${x.supplier_id}</td>
 <td>${x.supplier_name}</td>
 <td>${x.supplier_address}</td>
-<td><a href="edit/${x.supplier_id}">Edit</a></td>
-<td><a href="delete/${x.supplier_id}">Delete</a></td> 
+<td><a href="editS/${x.supplier_id}">Edit</a></td>
+<td><a href="deleteS/${x.supplier_id}">Delete</a></td> 
 </c:forEach>
 </table>
 </form>

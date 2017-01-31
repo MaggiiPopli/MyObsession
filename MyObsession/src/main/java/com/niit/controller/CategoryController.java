@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.dao.CategoryDAOImpl;
 import com.niit.model.Category;
+import com.niit.model.Product;
 
 
 
@@ -23,7 +24,7 @@ public class CategoryController {
 	@RequestMapping("/addC")
 	public ModelAndView addC()
 	{
-		ModelAndView mv=new ModelAndView("AddCategory");
+		ModelAndView mv=new ModelAndView("AddCategory","command",new Category());
 		return mv;
 	}
 	
@@ -44,15 +45,24 @@ public class CategoryController {
 		return mv;
 		
 	}
-	@RequestMapping("/edit/{category_id}")
+	@RequestMapping("/editC/{category_id}")
 	public ModelAndView edit(@PathVariable String category_id)
 	{
-		categoryDAOImpl.editCategory(category_id);
-		ModelAndView mv= new ModelAndView("redirect:/viewC");
-		return mv;
+		Category c= categoryDAOImpl.getCategoryById(category_id);
+		return new ModelAndView("EditCategory","command",c);
+
 	}
-	 
-	@RequestMapping("/delete/{category_id}")
+	
+	@RequestMapping("/editcategory")
+	public ModelAndView editSave(@ModelAttribute Category c)
+	{
+	 	categoryDAOImpl.updateCategory(c);
+		System.out.println("EditSave");
+		return new ModelAndView("redirect:/viewC");	
+	}	
+
+	
+	@RequestMapping("/deleteC/{category_id}")
 	public ModelAndView delete(@PathVariable String category_id)
 	{
 		categoryDAOImpl.deleteCategory(category_id);

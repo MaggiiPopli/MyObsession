@@ -18,6 +18,8 @@ public class Product {
 	private String brand;
 	private String price;
 	private String description;
+	private String category_name;
+	private String supplier_name;
 	@Transient
 	private MultipartFile image;
 	
@@ -56,6 +58,22 @@ public class Product {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public String toString(){
+		return product_id+"  "+name;
+	}
+	public String getCategory_name() {
+		return category_name;
+	}
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
+	}
+	public String getSupplier_name() {
+		return supplier_name;
+	}
+	public void setSupplier_name(String supplier_name) {
+		this.supplier_name = supplier_name;
 	}
 	
 
