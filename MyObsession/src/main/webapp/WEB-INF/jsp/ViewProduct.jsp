@@ -10,7 +10,7 @@
 </head>
 <body>
 <form action="viewproduct">
-<table border="1">
+<table align ="center" border="5">
 <th>Product_ID</th>
 <th>Product_Name</th>
 <th>Brand</th>

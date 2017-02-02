@@ -2,11 +2,17 @@ package com.niit.dao;
 
 import java.util.List;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
+import com.niit.model.Supplier;
 
 public interface ProductDAO {
 	
 	public List<Product> viewProduct();
+	
+	public List<Category> getCategoryname();
+	
+	public List<Supplier> getSuppliername();
 
 	public void saveProduct(Product p);
 	
@@ -17,4 +23,5 @@ public interface ProductDAO {
 	public Product getProductById(String product_id);
 	
 	public void updateProduct(Product p);
+	
 }

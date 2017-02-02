@@ -16,7 +16,8 @@ body
 </style>
 </head>
 <body>
-<form action="admin">
+<jsp:include page="Header.jsp"></jsp:include>
+
 <a href="addP">Add Product</a><br>
 <a href="viewP">View Product</a>
 <br>
@@ -27,7 +28,6 @@ body
 <br>
 <a href="addS">Add Supplier</a><br>
 <a href="viewS">View Supplier</a>
- 
-</form>
+
 </body>
 </html>

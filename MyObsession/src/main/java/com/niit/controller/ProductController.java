@@ -16,7 +16,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.niit.dao.ProductDAOImpl;
+import com.niit.model.Category;
 import com.niit.model.Product;
+import com.niit.model.Supplier;
 
 @Controller
 public class ProductController {
@@ -31,6 +33,10 @@ public class ProductController {
 	public ModelAndView addP()
 	{
 		ModelAndView mv= new ModelAndView("AddProduct","command",new Product());
+		List<Category> listC=productDAOImpl.getCategoryname();
+		mv.addObject("ListC", listC);
+		List<Supplier> listS=productDAOImpl.getSuppliername();
+		mv.addObject("ListS", listS);
 		return mv;
 	}
 	

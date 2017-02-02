@@ -135,6 +135,7 @@ form.login a:hover
                <F:input path="category_id" placeholder="Category ID" />
                 <F:input path="category_name" placeholder="Category Name" />
                 <F:input path="category_description" placeholder="Description"/>
+                
 				<input type="submit" value="Add" class="btn btn-success btn-sm" />
                           </F:form>
             </div>

@@ -9,7 +9,9 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
+import com.niit.model.Supplier;
 
 @Repository
 public class ProductDAOImpl implements ProductDAO{
@@ -91,6 +93,30 @@ public class ProductDAOImpl implements ProductDAO{
 		sess.update(p);
 		tx.commit();
 		sess.close();
+	}
+
+	public List<Category> getCategoryname() {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		String hql="select category_name from Category";
+	  Query q=sess.createQuery(hql);
+		
+		List<Category> l=q.list();
+		
+		return l;
+	}
+
+	public List<Supplier> getSuppliername() {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		String hql="select supplier_name from Supplier";
+	  Query q=sess.createQuery(hql);
+		
+		List<Supplier> l=q.list();
+	
+		return l;
 	}
 
  }

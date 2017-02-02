@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@page isELIgnored="false" %>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -125,24 +126,30 @@ form.login a:hover
 </style>
 </head>
 <body>
-${msg}
 <div class="container">
     
-<div class="wrap">
+            <div class="wrap">
                 <p class="form-title">
-                    SIGN-UP</p>
-                <form class="login" action="register">
-                <input type="text" name="name" placeholder="Name" />
+                    Welcome Admin</p>
+                <form class="login" action="<c:url value='/perform_login'/>" method="post">
                 <input type="text" name="username" placeholder="Username" />
-                <input type="text" name="email" placeholder="Email" />
-                <input type="radio" name="gender" value="Male" />Male&nbsp;
-                <input type="radio" name="gender" value="Female" />Female
-                <input type="text" name="contact" placeholder="Contact Num" />
                 <input type="password" name="password" placeholder="Password" />
-                <input type="text" name="address" placeholder="Address" />
-                <input type="submit" value="Register" class="btn btn-success btn-sm" />
-            </form>
+                <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
+                <div class="remember-forgot">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" />
+                                    Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </form>
             </div>
-            </div>
+        </div>
 </body>
 </html>

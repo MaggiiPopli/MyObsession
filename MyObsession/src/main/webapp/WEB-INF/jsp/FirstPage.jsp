@@ -1,3 +1,5 @@
+<%@page isELIgnored="false" %>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
   <title>MyObsession</title>
@@ -8,15 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 <style>
 body
-{
-	background: url('https://stephanywathey.files.wordpress.com/2016/05/light-pink-floral-background-tumblr-wallpapers-for-vintage-backgrounds-tumblr-pink-pic.jpg')no-repeat fixed;
-	
-}
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 5;
       border-radius: 0;
-     background: url('http://previews.123rf.com/images/hamsterman/hamsterman1105/hamsterman110500031/9452603-Set-of-broken-multicolor-eye-shadow-background-macro-Stock-Photo.jpg')no-repeat center fixed;
+     background: url('https://theknockturnal.com/wp-content/uploads/2016/05/pro_cms.jpg')no-repeat center fixed;
     }
     
     
@@ -77,9 +75,18 @@ body
       <li><a style="color:white" href="#">Offers</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    <li><a style="color:white" href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+    
+     <c:if test="${empty username}">
+     <li><a style="color:white" href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
       <li><a style="color:white" href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
       <li><a style="color:white" href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
+      </c:if>
+      
+      
+      <c:if test="${not empty username}">
+      <li><a style="color:white" href="/logout"><span class="glyphicon glyphicon-user"></span> Sign-Out</a></li>
+      <li>Hi, <%=session.getAttribute("username") %></li>
+      </c:if>
     </ul>
     </div>
 </nav>
@@ -99,7 +106,7 @@ body
       </div>
 
       <div class="item">
-        <img src="http://www.nykaa.com/media/wysiwyg/NYX_HpSlidingBanner_V8.jpg" alt=>
+        <img src="http://www.nykaa.com/media/bannerpro/d7.jpg" alt=>
               
       </div>
       <div class="item">
@@ -123,7 +130,7 @@ body
 <div class="container text-center">  
 <div class="add-tiles">
 <a href="#" class="pro-detail">
-<img src="resources/image/Discover_1.png" alt=""></a><br>
+ <img src="resources/image/Discover.jpg" style="height:12%"></a><br>
    
   <div class="row">
   	<div class="col-sm-4">
@@ -131,7 +138,7 @@ body
       
     </div>
     <div class="col-sm-4"> 
-      <img src="http://www.boots.com/wcsstore/cmsassets/Boots/Library/Icon/Homepage/Brand%20Treatments/Maybelline/2016/June%20/Blushed_Nudes_360x170px/162006631_Amended.jpg" style="width:100%; height:50%" alt="Image">    
+      <img src="http://btcosmetic.com/en/wp-content/uploads/sites/2/2014/11/Mac-Cosmetics_color-makeup.jpg" style="width:100%; height:50%" alt="Image">    
     </div>
     <div class="col-sm-4">
       <img src= "http://angelajonsson.com/wp-content/uploads/2014/06/angelajonsson-lakme-ad-2014.jpg" class="image-responsive" style="width:100%;height:50%" alt="image">
@@ -143,16 +150,16 @@ body
 <div class="container text-center">
 <div class="add-tiles">
 <a href="#" class="pro-detail">
-<img src="http://www.nykaa.com/media/wysiwyg/Best-Sellers_1.png" alt=""></a><br>
+<img src="http://www.nykaa.com/media/wysiwyg/Best-Sellers_26jan.png" alt=""></a><br>
     
 <a href="#" target="_blank" class="img-tile">
-<img src="http://www.nykaa.com/media/wysiwyg/Smooch-Worthy-Lip-Balms.jpg" alt=""></a>
+<img src="http://www.nykaa.com/media/wysiwyg/Best_Of_Beauty_2016_Rev_P2.jpg" alt=""></a>
 
 <a href="#" target="_blank" class="img-tile">
-<img src="http://www.nykaa.com/media/wysiwyg/Smudged-Sooty-And-Smoky.jpg" alt=""></a>
+<img src="http://www.nykaa.com/media/wysiwyg/Going-on-a-Fancy-Date_prs.jpg" alt=""></a>
 
 <a href="#" target="_blank" class="img-tile">
-<img src="http://www.nykaa.com/media/wysiwyg/Join-The-Glitter-Gang.jpg" alt=""></a>
+<img src="http://www.nykaa.com/media/wysiwyg/Dangerously_Hot_Nude_Lips_mob_jan.jpg" alt=""></a>
          
 <a href="#" target="_blank" class="img-tile">
 <img src="http://www.nykaa.com/media/wysiwyg/Join-The-Matte-Revolution.jpg" alt=""></a>

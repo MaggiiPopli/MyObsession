@@ -136,7 +136,16 @@ form.login a:hover
                 <F:input path="name" placeholder="Product Name" />
                 <F:input path="brand" placeholder="Brand" />
                 <F:input path="price" placeholder="Product Price"/>
-                <F:input path="description" placeholder="Description"/>
+                <F:input path="description" placeholder="Description"/> 
+                <F:select path="supplier_name">
+                <F:option value="None" label="Supplier Name"/>
+                <F:options items="${ListS}"/>
+                </F:select><br><br>
+                <F:select path="category_name">
+                <F:option value="None" label="Category Name"/>
+                <F:options items="${ListC}"/>
+                </F:select><br><br>
+                
                 Add Image:<input type="file" name="image"/>
 				<input type="submit" value="Add" class="btn btn-success btn-sm" />
                           </F:form>
