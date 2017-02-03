@@ -55,15 +55,15 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     
+    <li><a style="color:white" href="Admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
      <c:if test="${empty username}">
-     <li><a style="color:white" href="admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
-      <li><a style="color:white" href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
+      <l i><a style="color:white" href="sign-up"><span class="glyphicon glyphicon-user"></span> Sign-Up</a></li>
       <li><a style="color:white" href="sign-in"><span class="glyphicon glyphicon-log-in"></span> Sign-In</a></li>
       </c:if>
       
       
       <c:if test="${not empty username}">
-      <li><a style="color:white" href="logout"><span class="glyphicon glyphicon-user"></span> Sign-Out</a></li>
+      <li><a style="color:white" href="logout1"><span class="glyphicon glyphicon-user"></span> Sign-Out</a></li>
       <li>Hi, <%=session.getAttribute("username") %></li>
       </c:if>
     </ul>

@@ -47,7 +47,7 @@ public class MyController {
 		return mv;
 	}
 	
-	@RequestMapping("/logout")
+	@RequestMapping("/logout1")
 	public ModelAndView logout(HttpSession session)
 	{
 		session.setAttribute("username", "");
@@ -63,12 +63,18 @@ public class MyController {
 	}
 	
 	@RequestMapping("/AdminLogin")
-	public ModelAndView register111()
+	public ModelAndView AdminLogin()
 	{
 		ModelAndView mv= new ModelAndView("AdminLogin");
 		return mv;
 	}
-	@RequestMapping("/admin")
+	@RequestMapping("/AdminLoginError")
+	public ModelAndView AdminError()
+	{
+		ModelAndView mv= new ModelAndView("AdminLoginError");
+		return mv;
+	}
+	@RequestMapping("/Admin")
 	public ModelAndView admin()
 	{
 		ModelAndView mv= new ModelAndView("Admin");

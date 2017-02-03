@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
@@ -49,6 +50,13 @@ public class ProductController {
 		String str=g.toJson(list);
 		System.out.println("JSON DATA IS "+str);
 		mv.addObject("pr",str);
+		return mv;
+	}
+	
+	@RequestMapping("ProductDetails/{{x.product_id}}")
+	public ModelAndView productDetails()
+	{
+		ModelAndView mv=new ModelAndView("ProductDetails");
 		return mv;
 	}
 	 

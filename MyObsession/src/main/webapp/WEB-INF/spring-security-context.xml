@@ -18,7 +18,7 @@
 		<http auto-config="true" use-expressions="true">
 	
 		
-		<intercept-url pattern="/Admin**" access="hasRole('role_admin')" />
+		<intercept-url pattern="/Admin" access="hasRole('ROLE_ADMIN')" />
 		
 		<!-- <intercept-url pattern="//**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" /> -->
 		
@@ -30,7 +30,7 @@
 			username-parameter="username"
 			password-parameter="password" />
 		
-		<logout logout-url="/logout" logout-success-url="/FirstPage"  />
+		<logout logout-url="/logout" logout-success-url="/"  />
 		
 		<csrf disabled="true"/>
 	
@@ -41,7 +41,7 @@
 	  <authentication-provider>
 		<jdbc-user-service data-source-ref="myDataSource"
 		  users-by-username-query=
-		    "select username,password,enabled from User where username=? and role='role_admin'"
+		    "select username,password,enabled from User where username=? and role='ROLE_ADMIN'"
 		  authorities-by-username-query=
 		    "select username, role from User where username=?" />
 	  </authentication-provider>
