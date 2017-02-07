@@ -96,6 +96,7 @@ body
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -143,7 +144,7 @@ body
     <div class="col-sm-4">
       <img src= "http://angelajonsson.com/wp-content/uploads/2014/06/angelajonsson-lakme-ad-2014.jpg" class="image-responsive" style="width:100%;height:50%" alt="image">
       </div>
-      
+   </div>   
 
   </div>
 </div><br>

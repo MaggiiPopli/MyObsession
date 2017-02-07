@@ -53,10 +53,12 @@ public class ProductController {
 		return mv;
 	}
 	
-	@RequestMapping("ProductDetails/{{x.product_id}}")
-	public ModelAndView productDetails()
+	@RequestMapping("ProductDetails/{product_id}")
+	public ModelAndView productDetails(@PathVariable String product_id)
 	{
+		Product p= productDAOImpl.getProductById(product_id);
 		ModelAndView mv=new ModelAndView("ProductDetails");
+		mv.addObject("product", p);
 		return mv;
 	}
 	 
@@ -70,7 +72,7 @@ public class ProductController {
 			try {
 				bytes=p.getImage().getBytes();
 				productDAOImpl.saveProduct(p);
-				String path="D:/eclipse/MyObsession/src/main/webapp/resources/image"+p.getProduct_id()+".jpg";
+				String path="D:/eclipse/MyObsession/src/main/webapp/resources/image/"+p.getProduct_id()+".jpg";
 				File f=new File(path);
 				BufferedOutputStream bs=new BufferedOutputStream(new FileOutputStream(f));
 				bs.write(bytes);
@@ -79,10 +81,13 @@ public class ProductController {
 			catch(Exception ex)
 				{
 					System.out.println(ex);
+					
 				}
 				ModelAndView mv= new ModelAndView("redirect:/viewP");
 				return mv;
 		}
+	
+	
 	
 	@RequestMapping("/viewP")
 	public ModelAndView m1()
