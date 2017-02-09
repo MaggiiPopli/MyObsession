@@ -49,15 +49,14 @@ body
     </div>
     <ul class="nav navbar-nav">
       <li><a style="color:white" href="#">Home</a></li>
+       <li><a style="color:white" href="demo1">Click</a></li>
       <li class="dropdown">
       <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Category
       <span class="caret"></span></a>
       <ul class="dropdown-menu">  
-      <li><a href="product">MakeUp</a></li>
-      <li><a href="#">Skin</a></li>
-      <li><a href="#">Hair</a></li>
-      <li><a href="#">Bath&Body</a></li>
-      <li><a href="#">Fragrance</a></li>
+      <c:forEach var="category" items="${ListC}">
+      <li><a href="product/${category.category_name}">${category.category_name}</a></li>
+   		</c:forEach>
       </ul>
       </li>
       <li class="dropdown">

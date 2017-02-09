@@ -41,11 +41,11 @@ public class ProductController {
 		return mv;
 	}
 	
-	@RequestMapping("/product")
-	public ModelAndView displayProducts()
+	@RequestMapping("product/{category_name}")
+	public ModelAndView displayProducts(@PathVariable String category_name)
 	{
 		ModelAndView mv= new ModelAndView("product");
-		List<Product> list=productDAOImpl.viewProduct();
+		List<Product> list=productDAOImpl.viewProductByCategory(category_name);
 		Gson g=new Gson();
 		String str=g.toJson(list);
 		System.out.println("JSON DATA IS "+str);

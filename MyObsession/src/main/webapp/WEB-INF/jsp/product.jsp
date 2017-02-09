@@ -33,7 +33,7 @@ body
 <td>{{x.brand}}</td>
 <td>{{x.price}}</td>
 <td>{{x.description}}</td>
-<td><a href="ProductDetails/{{x.product_id}}"><i class="material-icons" style="color:purple";>info</i></a></td>
+<td><a href="/MyObsession/ProductDetails/{{x.product_id}}"><i class="material-icons" style="color:purple";>info</i></a></td>
 </tr>
 </table>
 

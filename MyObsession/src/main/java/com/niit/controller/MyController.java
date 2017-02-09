@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.dao.CategoryDAOImpl;
 import com.niit.dao.ProductDAOImpl;
 import com.niit.dao.UserDAOImpl;
 import com.niit.model.Category;
 import com.niit.model.Supplier;
 import com.niit.model.User;
+import com.sun.javafx.css.CalculatedValue;
 
 @Controller
 public class MyController { 
@@ -29,21 +31,32 @@ public class MyController {
 	@Autowired
 	ProductDAOImpl productDAOImpl;
 	
+	@Autowired
+	CategoryDAOImpl categoryDAOImpl;
+	
 	
 	@RequestMapping("/")
 	public ModelAndView firstPage()
 	{
 		ModelAndView mv=new ModelAndView("FirstPage");
-		List<Category> listC=productDAOImpl.getCategoryname();
+		List<Category> listC=categoryDAOImpl.viewCategory();
+		System.out.println("category values are"+listC);
 		mv.addObject("ListC", listC);
-		List<Supplier> listS=productDAOImpl.getSuppliername();
-		mv.addObject("ListS", listS);
+		/*List<Supplier> listS=productDAOImpl.getSuppliername();
+		mv.addObject("ListS", listS);*/
 		return mv;
 	}
 	@RequestMapping("/sign-in")
 	public ModelAndView login()
 	{
 		ModelAndView mv = new ModelAndView("Login");
+		return mv;
+	}
+	
+	@RequestMapping("/demo1")
+	public ModelAndView testMethod()
+	{
+		ModelAndView mv = new ModelAndView("demo1");
 		return mv;
 	}
 	

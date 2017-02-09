@@ -46,6 +46,23 @@ public class ProductDAOImpl implements ProductDAO{
 		return l;
 	
 	}
+	
+	
+	public List<Product> viewProductByCategory(String category_name) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		String hql="from Product where category_name=:category_name";
+		System.out.println("After from product");
+	  Query q=sess.createQuery(hql);
+	  q.setParameter("category_name", category_name);
+		
+		List<Product> l=q.list();
+		System.out.println("LIST PRODUCT"+l);
+		
+		return l;
+	
+	}
 
 	public void saveProduct(Product p) {
 		// TODO Auto-generated method stub

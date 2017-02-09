@@ -82,7 +82,8 @@ public class CategoryDAOImpl implements CategoryDAO{
 		Category c=(Category) sess.get(Category.class,category_id);
 		return c;
 	}
-
+	
+	
 	public void updateCategory(Category c) {
 		// TODO Auto-generated method stub
 		Session sess=sessionFactory.openSession();
