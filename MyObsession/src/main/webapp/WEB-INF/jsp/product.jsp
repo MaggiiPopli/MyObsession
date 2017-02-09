@@ -9,25 +9,36 @@
 <style>
 body
 	{
-		background: url('https://s-media-cache-ak0.pinimg.com/originals/f2/db/06/f2db06be79058872411d1b49aed0ddd9.jpg')no-repeat center fixed;
+		background: url('http://sunshinehairdesigns.com/wp-content/uploads/2015/04/trend-video-background.jpg')no-repeat center fixed;
     	background-size: cover;
    	 	padding: 0;
     	margin: 0;
+	}
+	
+	caption
+	{
+		font-style: italic;
+		color: aqua;
+		font-size: larger;
+		margin: 10;
+		padding: 10;
 	}
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body ng-app="myApp" ng-controller="myCtrl">
-
+<div>
+<input type="text" class="form-control" placeholder="Search Here" ng-model="search">
+</div>
 <table align ="center" border="7">
-
+<caption>Product Details</caption>
 <th>Product_ID</th>
 <th>Product_Name</th>
 <th>Brand</th>
 <th>Price</th>
 <th>Description</th>
 <th>View Details</th>
-<tr ng-repeat="x in list">
+<tr ng-repeat="x in list | filter:search">
 <td>{{x.product_id}}</td>
 <td>{{x.name}}</td>
 <td>{{x.brand}}</td>

@@ -26,11 +26,11 @@ body
 </style>
 </head>
 <body>
-<%-- <jsp:include page="Header.jsp"/>
+<jsp:include page="Header.jsp"/>
   
 
-<form action="addtocart">
-<h>Product Details</h>
+<form action="/MyObsession/addtocart">
+
 
 <div align="center">
   
@@ -67,13 +67,9 @@ body
  </div>
  </div>
  </div>
-</form> --%>
+</form>
 
-<!-- <form action="addtocart">
-<input type="submit" value="AddToCart">
-</form> -->
-
-<a href="addtocart">click for cart</a>
+<!-- <a href="/MyObsession/addtocart">click for cart</a> -->
 
 
 </body>
