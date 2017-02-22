@@ -10,7 +10,7 @@
 <style>
 body
 {
-    background: url('https://static1.squarespace.com/static/54a1e590e4b0663b5485a005/t/54c7ed7fe4b04a2986d35353/1422388626800/how+to+become+a+makeup+artist')no-repeat center fixed;
+    background: url('https://stephanywathey.files.wordpress.com/2016/05/light-pink-floral-background-tumblr-wallpapers-for-vintage-backgrounds-tumblr-pink-pic.jpg?w=1180&h=610&crop=1')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -126,6 +126,7 @@ form.login a:hover
 </style>
 </head>
 <body>
+<jsp:include page="HeaderAdmin.jsp"></jsp:include>
 <div class="container">
     
             <div class="wrap">

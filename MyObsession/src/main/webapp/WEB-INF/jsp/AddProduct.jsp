@@ -10,143 +10,81 @@
 <style>
 body
 {
-    background: url('https://userscontent2.emaze.com/images/7035292f-29ff-4935-9f48-5daca8367237/651874626bf646ca8b11da4718574a98.jpeg')no-repeat center fixed;
+    background: url('https://static1.squarespace.com/static/55a79fd9e4b0f140392f0238/t/55aab813e4b01f51ac6f429c/1437251606775/artistic-watercolor-background-pink-cool-wallpapers-2560x1600.jpg?format=1500w')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 
-.wrap
-{
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
+label {
+color:white;
 }
 
-p.form-title
-{
-    font-family: 'Comic Sans MS' , sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
-    color: #FF5733;
-    margin-top: 5%;
+.form-control
+	{
+		width:500px;
+		}
+h2{
+	color:maroon;
+	font-family:Comic Sans MS;
+		margin: 30;
 }
-
-form
-{
-    width: 250px;
-    margin: 0 auto;
-}
-
-form.login input[type="text"], form.login input[type="password"]
-{
-    width: 100%;
-    margin: 0;
-    padding: 5px 10px;
-    background: 0;
-    border: 0;
-    border-bottom: 1px solid #581845;
-    outline: 0;
-    font-style: italic;
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #581845;
-    outline: 0;
-}
-
-form.login input[type="submit"]
-{
-    width: 100%;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-family: 'Comic Sans MS' , sans-serif;
-    font-weight: 500;
-    margin-top: 16px;
-    outline: 0;
-    cursor: pointer;
-    color:#FF5733;
-    letter-spacing: 1px;
-}
-
-form.login input[type="submit"]:hover
-{
-    transition: background-color 0.5s ease;
-}
-
-form.login .remember-forgot
-{
-    float: left;
-    width: 100%;
-    margin: 10px 0 0 0;
-}
-form.login .forgot-pass-content
-{
-    min-height: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-form.login label, form.login a
-{
-    font-size: 13px;
-    font-weight: 400;
-    color: #581845;
-}
-
-form.login a
-{
-    transition: color 0.5s ease;
-}
-
-form.login a:hover
-{
-    color: #2ecc71;
-}
-
-.pr-wrap
-{
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: none;
-}
-
-
 </style>
 </head>
 <body>
-<div class="container">
-    
-            <div class="wrap">
-                <p class="form-title">
-                    Add Product</p>
-                <F:form class="login" action="addproduct" method="post" enctype="multipart/form-data">
-               <F:input path="product_id" placeholder="Product ID" />
-                <F:input path="name" placeholder="Product Name" />
-                <F:input path="brand" placeholder="Brand" />
-                <F:input path="price" placeholder="Product Price"/>
-                <F:input path="description" placeholder="Description"/> 
-                <F:select path="supplier_name">
+<div class="container-wrapper">
+	<div class="container" align="center">
+	
+	<F:form action="addproduct" method="post" enctype="multipart/form-data">
+	
+                <h2>Add Product</h2>
+                 
+                <div class="form-group">
+				<label>Product ID</label>
+               <F:input path="product_id"  placeholder="Product ID" class="form-control" />
+               </div>
+               
+               	<div class="form-group">
+				<label>Product Name</label>
+                <F:input path="name" placeholder="Product Name" class="form-control"/>
+                </div>
+                
+                <div class="form-group">
+				<label>Product Brand</label>
+                <F:input path="brand" placeholder="Brand" class="form-control"/>
+                </div>
+                
+                <div class="form-group">
+				<label>Product Price</label>
+                <F:input path="price" placeholder="Product Price" class="form-control"/>
+                </div>
+                
+                <div class="form-group">
+				<label>Description</label>
+                <F:input path="description" placeholder="Description" class="form-control"/> 
+                </div>
+                <div class="form-group">
+				<label>Supplier Name</label>
+                <F:select path="supplier_name" class="form-control">
                 <F:option value="None" label="Supplier Name"/>
                 <F:options items="${ListS}"/>
                 </F:select><br><br>
-                <F:select path="category_name">
-                <F:option value="None" label="Category Name"/>
-                <F:options items="${ListC}"/>
-                </F:select><br><br>
+                </div>
                 
-                Add Image:<input type="file" name="image"/>
+                <div class="form-group">
+				<label>Category Name</label>
+                <F:select path="category_name" class="form-control" >
+                <F:option value="None" label="Category Name"/>
+                <F:options items="${ListC}" />
+                </F:select><br><br>
+                </div>
+                
+                <div class="form-group">
+				<label>Add Image:</label>
+                <input type="file" name="image" class="form-control"/>
+                </div>
+                
+                
 				<input type="submit" value="Add" class="btn btn-success btn-sm" />
                           </F:form>
             </div>

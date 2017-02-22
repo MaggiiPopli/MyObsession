@@ -9,6 +9,8 @@
 <title>View Product</title>
 </head>
 <body>
+<jsp:include page="HeaderAdmin.jsp"></jsp:include>
+<div class="container" align="center">
 <form action="viewproduct">
 <table align ="center" border="5">
 <th>Product_ID</th>
@@ -31,7 +33,7 @@
 </c:forEach>
 </table>
 </form>
-
+</div>
 
 </body>
 </html>

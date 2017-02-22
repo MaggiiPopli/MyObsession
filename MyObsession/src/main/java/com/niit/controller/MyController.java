@@ -100,7 +100,11 @@ public class MyController {
 	@RequestMapping("/Admin")
 	public ModelAndView admin()
 	{
+		
 		ModelAndView mv= new ModelAndView("Admin");
+		List<Category> listC=categoryDAOImpl.viewCategory();
+		System.out.println("category values are"+listC);
+		mv.addObject("ListC", listC);
 		return mv;
 	}
 

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@page isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,6 +9,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
 <title>Admin</title>
 <style>
 
@@ -53,15 +60,15 @@ body
     </div>
     <ul class="nav navbar-nav">
       <li><a style="color:white" href="#">Home</a></li>
+      
+      
       <li class="dropdown">
       <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">Category
       <span class="caret"></span></a>
       <ul class="dropdown-menu">  
-      <li><a href="product">MakeUp</a></li>
-      <li><a href="#">Skin</a></li>
-      <li><a href="#">Hair</a></li>
-      <li><a href="#">Bath&Body</a></li>
-      <li><a href="#">Fragrance</a></li>
+      <c:forEach var="category" items="${ListC}">
+      <li><a href="product/${category.category_name}">${category.category_name}</a></li>
+   		</c:forEach>
       </ul>
       </li>
       <li class="dropdown">

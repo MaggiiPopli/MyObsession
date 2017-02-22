@@ -40,13 +40,15 @@ This is the ShoppingCart
 <th>Brand</th>
 <th>Price</th>
 <th>Quantity</th>
+<th>Subtotal</th>
 
 <tr ng-repeat="x in list | filter:search">
 <td>{{x.cart_id}}</td>
 <td>{{x.pName}}</td>
 <td>{{x.pBrand}}</td>
-<td>{{x.pPrice}}</td>
+<td>{{x.pPrice | currency:'Rs'}}</td>
 <td>{{x.quantity}}</td>
+<td>{{x.pPrice*x.quantity | currency:'Rs'}}</td>
 <%-- <td><a href="${flowExecutionUrl}&_eventId=event1">Next Page</a></td>
  --%>
 </tr>
