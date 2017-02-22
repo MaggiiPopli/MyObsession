@@ -10,7 +10,7 @@
 <style>
 body
 {
-    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
+    background: url('https://userscontent2.emaze.com/images/7035292f-29ff-4935-9f48-5daca8367237/651874626bf646ca8b11da4718574a98.jpeg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;

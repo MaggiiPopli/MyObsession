@@ -10,6 +10,8 @@ public interface ProductDAO {
 	
 	public List<Product> viewProduct();
 	
+	public List<Product> viewProductByCategory(String category_name);
+	
 	public List<Category> getCategoryname();
 	
 	public List<Supplier> getSuppliername();

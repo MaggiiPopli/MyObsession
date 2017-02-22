@@ -32,5 +32,11 @@ public class Supplier {
 	public void setSupplier_address(String supplier_address) {
 		this.supplier_address = supplier_address;
 	}
+	@Override
+	public String toString() {
+		return "Supplier [supplier_id=" + supplier_id + ", supplier_name=" + supplier_name + ", supplier_address="
+				+ supplier_address + "]";
+	}
 
+	
 }

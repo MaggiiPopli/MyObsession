@@ -27,13 +27,11 @@ body
 </head>
 <body>
 <jsp:include page="Header.jsp"/>
-  
-
-<form action="/MyObsession/addtocart">
+  <form action="/MyObsession/cart/${product.product_id}">
 
 
 <div align="center">
-  
+   
 <div class="add-tiles">
 <div class="row">
 <div class=panel">
@@ -60,14 +58,18 @@ body
  <br>
  Description:${product.description}<br>
  <br>
- <input type="submit" value="AddtoCart"/>
+ Quantity:  <input type="number" value="1" name="q"/><br><br>
+ <input type="submit" value="AddtoCart"/> 
+
  </div>
   	</div>
   	
  </div>
  </div>
  </div>
+ 
 </form>
+
 
 <!-- <a href="/MyObsession/addtocart">click for cart</a> -->
 

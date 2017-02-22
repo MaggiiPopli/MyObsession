@@ -13,7 +13,7 @@
 body
 {
 
-    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
+    background: url('http://il5.picdn.net/shutterstock/videos/8263831/thumb/1.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -24,6 +24,25 @@ body
       border-radius: 0;
      background: url('https://theknockturnal.com/wp-content/uploads/2016/05/pro_cms.jpg')no-repeat center fixed;
     }
+    
+    p
+{
+    font-family: 'Comic Sans MS' , sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    color: #FF5733;
+    margin-top: 1%;
+}
+
+.container
+	{
+			font-family: 'Comic Sans MS' , sans-serif;
+			font-size: 30px;
+			margin-top: 3%;
+	}	
+
 </style>
 </head>
 <body>
@@ -67,7 +86,10 @@ body
     </ul>
     </div>
 </nav>
+
 <p>Welcome Admin</p>
+
+<div class="container" align="center">
 <a href="addP">Add Product</a><br>
 <a href="viewP">View Product</a>
 <br>
@@ -79,5 +101,6 @@ body
 <a href="addS">Add Supplier</a><br>
 <a href="viewS">View Supplier</a>
 
+</div>
 </body>
 </html>

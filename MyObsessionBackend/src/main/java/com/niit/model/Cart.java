@@ -7,47 +7,72 @@ import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
-@Component
 @Entity
+@Component
 public class Cart {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String cart_id;
-	private String productName;
-	private String productBrand;
-	private String productPrice;
-	private String quantity;
+	private int cart_id;
 	
-	public String getCart_id() {
+	private String username;
+	private String pName;
+	private String pId;
+	private int pPrice;
+	private String pBrand; 
+	private int quantity;
+	
+	public int getCart_id() {
 		return cart_id;
 	}
-	public void setCart_id(String cart_id) {
+	
+	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setCart_id(int cart_id) {
 		this.cart_id = cart_id;
 	}
-	public String getProductName() {
-		return productName;
+	public String getpName() {
+	 	return pName;
 	}
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setpName(String pName) {
+		this.pName = pName;
 	}
-	public String getProductBrand() {
-		return productBrand;
+	public String getpId() {
+		return pId;
 	}
-	public void setProductBrand(String productBrand) {
-		this.productBrand = productBrand;
+	public void setpId(String pId) {
+		this.pId = pId;
 	}
-	public String getProductPrice() {
-		return productPrice;
+	public int getpPrice() {
+		return pPrice;
 	}
-	public void setProductPrice(String productPrice) {
-		this.productPrice = productPrice;
+	public void setpPrice(int pPrice) {
+		this.pPrice = pPrice;
 	}
-	public String getQuantity() {
+	public String getpBrand() {
+		return pBrand;
+	}
+	public void setpBrand(String pBrand) {
+		this.pBrand = pBrand;
+	}
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	@Override
+	public String toString() {
+		return "Cart [cart_id=" + cart_id + ", pName=" + pName + ", pId=" + pId + ", pPrice=" + pPrice + ", pBrand="
+				+ pBrand + ", quantity=" + quantity + "]";
+	}
+	
 	
 }

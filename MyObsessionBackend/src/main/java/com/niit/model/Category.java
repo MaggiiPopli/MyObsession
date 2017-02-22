@@ -32,6 +32,11 @@ public class Category {
 	public void setCategory_description(String category_description) {
 		this.category_description = category_description;
 	}
+	@Override
+	public String toString() {
+		return "Category [category_id=" + category_id + ", category_name=" + category_name + ", category_description="
+				+ category_description + "]";
+	}
 	
 	
 

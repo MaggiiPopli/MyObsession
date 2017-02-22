@@ -19,7 +19,7 @@ public class Product {
 	private String product_id;
 	private String name;
 	private String brand;
-	private String price;
+	private int price;
 	private String description;
 	private String category_name;
 	private String supplier_name;
@@ -50,10 +50,10 @@ public class Product {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getDescription() {
@@ -63,9 +63,6 @@ public class Product {
 		this.description = description;
 	}
 	
-	public String toString(){
-		return product_id+"  "+name;
-	}
 	public String getCategory_name() {
 		return category_name;
 	}
@@ -78,6 +75,13 @@ public class Product {
 	public void setSupplier_name(String supplier_name) {
 		this.supplier_name = supplier_name;
 	}
+	@Override
+	public String toString() {
+		return "Product [product_id=" + product_id + ", name=" + name + ", brand=" + brand + ", price=" + price
+				+ ", description=" + description + ", category_name=" + category_name + ", supplier_name="
+				+ supplier_name + ", image=" + image + "]";
+	}
+	
 	
 
 }

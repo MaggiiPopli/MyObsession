@@ -20,7 +20,7 @@ body
 		font-style: italic;
 		color: aqua;
 		font-size: larger;
-		margin: 10;
+		margin: 10; 
 		padding: 10;
 	}
 

@@ -10,7 +10,7 @@
 <style>
 body
 {
-    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
+    background: url('http://sunshinehairdesigns.com/wp-content/uploads/2015/04/trend-video-background.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;

@@ -18,10 +18,6 @@ public class CategoryDAOImpl implements CategoryDAO{
 	@Autowired
 	SessionFactory sessionFactory; 
 	
-	public CategoryDAOImpl()
-	{
-		
-	}
 	
 	public CategoryDAOImpl(SessionFactory sessionFactory)
 	{

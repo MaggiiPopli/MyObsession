@@ -10,7 +10,7 @@
 <style>
 body
 {
-    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
+    background: url('http://cdn.pcwallart.com/images/vintage-eiffel-tower-tumblr-photography-wallpaper-4.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;

@@ -46,6 +46,21 @@ public class MyController {
 		mv.addObject("ListS", listS);*/
 		return mv;
 	}
+	
+	@RequestMapping("/header")
+	public ModelAndView header()
+	{
+		System.out.println("CALLING HEADER");
+		ModelAndView mv=new ModelAndView("Header");
+		List<Category> listC=categoryDAOImpl.viewCategory();
+		System.out.println("category values are"+listC);
+		mv.addObject("ListC", listC);
+		System.out.println("eNDING HEADER");
+		/*List<Supplier> listS=productDAOImpl.getSuppliername();
+		mv.addObject("ListS", listS);*/
+		return mv;
+	}
+	
 	@RequestMapping("/sign-in")
 	public ModelAndView login()
 	{
@@ -53,12 +68,7 @@ public class MyController {
 		return mv;
 	}
 	
-	@RequestMapping("/demo1")
-	public ModelAndView testMethod()
-	{
-		ModelAndView mv = new ModelAndView("demo1");
-		return mv;
-	}
+
 	
 	@RequestMapping("/logout1")
 	public ModelAndView logout(HttpSession session)
@@ -105,7 +115,7 @@ public class MyController {
 		if(x)
 		{
 			session.setAttribute("username", username);
-			return new ModelAndView("home","msg","Welcome to the Home Page!");
+			return new ModelAndView("FirstPage");
 		}
 		else
 		{
