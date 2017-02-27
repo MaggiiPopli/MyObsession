@@ -11,5 +11,7 @@ public interface CartDAO {
 	public void insertCart(Cart c);
 	
 	public void removeCart(String pId);
+	
+	public void cartFinal(String username);
 
 }

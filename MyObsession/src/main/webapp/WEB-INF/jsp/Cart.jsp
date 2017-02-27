@@ -6,12 +6,13 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <title>Insert title here</title>
 
 <style>
 body
 	{
-		background: url('http://sunshinehairdesigns.com/wp-content/uploads/2015/04/trend-video-background.jpg')no-repeat center fixed;
+		background: url('http://1.bp.blogspot.com/-tRTq1Ai8HEk/UatFpSkl0EI/AAAAAAAASbI/ZSj3pXCnw2I/s1600/Beauty+Pink+Flower+Wallpaper.jpg')no-repeat center fixed;
     	background-size: cover;
    	 	padding: 0;
     	margin: 0;
@@ -29,28 +30,30 @@ body
 </style>
 </head>
 <body>
-This is the ShoppingCart
 
 <body ng-app="myApp" ng-controller="myCtrl">
 <form action="/MyObsession/">
 <table align ="center" border="7">
 <caption>My Cart</caption>
 <th>Cart_ID</th>
+<th>Product ID</th>
 <th>Product_Name</th>
 <th>Brand</th>
 <th>Price</th>
 <th>Quantity</th>
 <th>Subtotal</th>
+<th>Remove</th>
 
 <tr ng-repeat="x in list | filter:search">
 <td>{{x.cart_id}}</td>
+<td>{{x.pId}}</td>
 <td>{{x.pName}}</td>
 <td>{{x.pBrand}}</td>
-<td>{{x.pPrice | currency:'Rs'}}</td>
+<td>{{x.pPrice | currency:'Rs.'}}</td>
 <td>{{x.quantity}}</td>
-<td>{{x.pPrice*x.quantity | currency:'Rs'}}</td>
-<%-- <td><a href="${flowExecutionUrl}&_eventId=event1">Next Page</a></td>
- --%>
+<td>{{x.pPrice*x.quantity | currency:'Rs.'}}</td>
+<td><a href="/MyObsession/removeCart/{{x.pId}}"><i class="material-icons" style="color:purple">delete</i></a></td>
+
 </tr>
 </table>
 <input type="submit" value="Continue Shopping">
@@ -62,7 +65,7 @@ app.controller('myCtrl', function($scope) {
 });
 </script>
 
- <a href="/MyObsession/buynow">Buy Now</a>
+<a href="/MyObsession/buynow">Buy Now</a>
 </form>
 </body>
 </html>

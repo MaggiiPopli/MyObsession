@@ -21,6 +21,7 @@ public class Cart {
 	private int pPrice;
 	private String pBrand; 
 	private int quantity;
+	private int Flag;
 	
 	public int getCart_id() {
 		return cart_id;
@@ -68,6 +69,18 @@ public class Cart {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	
+	
+	public int getFlag() {
+		return Flag;
+	}
+
+
+	public void setFlag(int flag) {
+		Flag = flag;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Cart [cart_id=" + cart_id + ", pName=" + pName + ", pId=" + pId + ", pPrice=" + pPrice + ", pBrand="

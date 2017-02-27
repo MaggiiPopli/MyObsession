@@ -7,10 +7,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<style>
+body
+{
+	background: url('http://1.bp.blogspot.com/-tRTq1Ai8HEk/UatFpSkl0EI/AAAAAAAASbI/ZSj3pXCnw2I/s1600/Beauty+Pink+Flower+Wallpaper.jpg')no-repeat center fixed;
+	background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+ 
+  h1
+ {
+ 
+ 	color:maroon;
+ 	font-style:italic;
+ }
+
+
+</style>
 </head>
 <body>
 <form action="viewsupplier">
-<table border="1">
+<div class="container" align="center">
+<h1>Suppliers</h1>
+</div>
+<table align="center" border="7">
+
 <th>Supplier ID</th>
 <th>Supplier Name</th>
 <th>Supplier Address</th>

@@ -29,12 +29,11 @@ public class CartDAOImpl implements CartDAO {
 		// TODO Auto-generated method stub
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
-		String hql="from Cart where username=:username";
+		String hql="from Cart where username=:username and Flag=0";
 	  Query q=sess.createQuery(hql);
 		q.setParameter("username", username);
 		List<Cart> l=q.list();
 		return l;
-	
 
 	}
 
@@ -51,9 +50,23 @@ public class CartDAOImpl implements CartDAO {
 		// TODO Auto-generated method stub
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
-		String hql="delete * from Cart where pId=:pId";
+		System.out.println("Product ID is"+pId);
+		String hql="delete from Cart where pId=:pId";
 		  Query q=sess.createQuery(hql);
 		  q.setParameter("pId", pId);
+		  q.executeUpdate();
+		//sess.delete(c);
+		tx.commit();
+		sess.close();
+	}
+
+	public void cartFinal(String username) {
+		// TODO Auto-generated method stub
+		Session sess=sessionFactory.openSession();
+		Transaction tx=sess.beginTransaction();
+		String hql="update Cart set Flag=1 where username=:username";
+		  Query q=sess.createQuery(hql);
+		  q.setParameter("username", username);
 		  q.executeUpdate();
 		//sess.delete(c);
 		tx.commit();

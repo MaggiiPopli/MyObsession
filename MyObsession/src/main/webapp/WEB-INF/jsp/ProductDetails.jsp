@@ -17,7 +17,7 @@
 body
 
 {
-    background: url('http://www.slenderbodywraps.org/makeupprocu.jpg')no-repeat center fixed;
+    background: url('https://ellehitchens.files.wordpress.com/2014/11/chappell-46.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;

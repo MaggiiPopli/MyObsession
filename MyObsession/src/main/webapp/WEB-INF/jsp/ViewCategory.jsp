@@ -6,11 +6,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>categories</title>
 </head>
+<style>
+body
+{
+	background: url('http://1.bp.blogspot.com/-tRTq1Ai8HEk/UatFpSkl0EI/AAAAAAAASbI/ZSj3pXCnw2I/s1600/Beauty+Pink+Flower+Wallpaper.jpg')no-repeat center fixed;
+	background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+ 
+ h1
+	{
+		font-style: italic;
+		color: maroon;
+	
+	}
+
+
+</style>
+
 <body>
+
+
 <form action="viewcategory">
-<table border="1">
+<div class="container" align="center">
+<h1>Categories</h1>
+</div>
+<table align ="center" border="7">
+
 <th>Category ID</th>
 <th>Category Name</th>
 <th>Category Description</th>
@@ -27,7 +52,7 @@
 </c:forEach>
 </table>
 </form>
-
+</div>
 
 </body>
 </html>

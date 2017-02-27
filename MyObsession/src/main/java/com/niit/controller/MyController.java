@@ -61,6 +61,21 @@ public class MyController {
 		return mv;
 	}
 	
+	
+	@RequestMapping("/headerAdmin")
+	public ModelAndView headerAdmin()
+	{
+		
+		ModelAndView mv=new ModelAndView("HeaderAdmin");
+		List<Category> listC=categoryDAOImpl.viewCategory();
+		System.out.println("category values are"+listC);
+		mv.addObject("ListC", listC);
+		/*List<Supplier> listS=productDAOImpl.getSuppliername();
+		mv.addObject("ListS", listS);*/
+		return mv;
+	}
+	
+	
 	@RequestMapping("/sign-in")
 	public ModelAndView login()
 	{

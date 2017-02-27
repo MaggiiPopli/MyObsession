@@ -30,8 +30,14 @@ h1{
 <body>
 <div class="container">
 <div align="center">
+<form action="/MyObsession/">
 <h3>Thankyou for shopping with MyObsession!</h3>
 <h1>!!FLAUNT IT yOur wAy!!</h1>
+
+<div>
+<input type="submit" value="Continue Shopping" class="btn btn-default"/>
+</div>
+</form>
 </div>
 </div>
 </body>

@@ -46,14 +46,20 @@ public class CartController {
 		c.setpId(p.getProduct_id());
 		c.setpPrice(p.getPrice());
 		c.setpBrand(p.getBrand());
+		c.setFlag(0);
 		int qty=Integer.parseInt(q);
 		c.setQuantity(qty);
 		c.setUsername(username);
 		cartDAOImpl.insertCart(c);
-		//ModelAndView mv=new ModelAndView("Cart");
-		//mv.addObject("cart", c);
 		return new ModelAndView("redirect:/viewCart");
 		}
+	}
+	
+	@RequestMapping("removeCart/{pId}")
+	public ModelAndView removeProduct(@PathVariable String pId)
+	{
+		cartDAOImpl.removeCart(pId);
+		return new ModelAndView("redirect:/viewCart");
 	}
 	
 	@RequestMapping("/viewCart")

@@ -6,11 +6,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Supplier</title>
 <style>
 body
 {
-    background: url('https://stephanywathey.files.wordpress.com/2016/05/light-pink-floral-background-tumblr-wallpapers-for-vintage-backgrounds-tumblr-pink-pic.jpg?w=1180&h=610&crop=1')no-repeat center fixed;
+    background: url('http://sunshinehairdesigns.com/wp-content/uploads/2015/04/trend-video-background.jpg')no-repeat center fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -50,7 +50,7 @@ form.login input[type="text"], form.login input[type="password"]
     margin: 0;
     padding: 5px 10px;
     background: 0;
-    border: 0;
+    border: 0;  
     border-bottom: 1px solid #581845;
     outline: 0;
     font-style: italic;
@@ -124,9 +124,10 @@ form.login a:hover
 
 
 </style>
+
 </head>
 <body>
-<jsp:include page="HeaderAdmin.jsp"></jsp:include>
+
 <div class="container">
     
             <div class="wrap">

@@ -6,13 +6,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
 <title>View Product</title>
+<style>
+body
+{
+	background: url('http://1.bp.blogspot.com/-tRTq1Ai8HEk/UatFpSkl0EI/AAAAAAAASbI/ZSj3pXCnw2I/s1600/Beauty+Pink+Flower+Wallpaper.jpg')no-repeat center fixed;
+	background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+ 
+ h1
+ {
+ 
+ 	color:maroon;
+ 	font-style:italic;
+ }
+
+
+</style>
 </head>
 <body>
-<jsp:include page="HeaderAdmin.jsp"></jsp:include>
-<div class="container" align="center">
+
+
 <form action="viewproduct">
+<div class="container" align="center">
+<h1>Products</h1>
+</div>
 <table align ="center" border="5">
+
 <th>Product_ID</th>
 <th>Product_Name</th>
 <th>Brand</th>
@@ -33,7 +56,6 @@
 </c:forEach>
 </table>
 </form>
-</div>
 
 </body>
 </html>

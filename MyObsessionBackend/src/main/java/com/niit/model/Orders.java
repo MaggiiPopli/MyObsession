@@ -26,6 +26,8 @@ public class Orders implements Serializable {
 	@OneToOne
 	private Payment pm;
 	
+	@OneToOne
+	private Cart c;
 	
 	
 	public int getOrderID() {
@@ -46,6 +48,13 @@ public class Orders implements Serializable {
 	}
 	public void setPm(Payment pm) {
 		this.pm = pm;
+	}
+	
+	public Cart getC() {
+		return c;
+	}
+	public void setC(Cart c) {
+		this.c = c;
 	}
 	@Override
 	public String toString() {
