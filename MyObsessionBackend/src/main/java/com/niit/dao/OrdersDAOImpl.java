@@ -30,8 +30,10 @@ public class OrdersDAOImpl implements OrdersDAO {
 		Transaction tx=sess.beginTransaction();
 		Payment p=o.getPm();
 		ShippingAddress s=o.getSa();
+		System.out.println("Orders are"+p+s);
 		sess.save(p);
 		sess.save(s);
+		sess.save(o);
 		tx.commit();
 		sess.close();
 	}

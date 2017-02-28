@@ -37,6 +37,7 @@ public class OrderWebFlow {
 		 public String addOrders(Orders orders)
 		 {
 			 ordersDAOImpl.saveOrders(orders);
+			 System.out.println("Orders"+orders);
 			 cartDAOImpl.cartFinal("hasit03");
 			 return "success";
 		 }

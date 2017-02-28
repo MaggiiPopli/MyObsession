@@ -18,14 +18,13 @@ body
     	margin: 0;
 	}
 	
-	caption
+	h1
 	{
 		font-style: italic;
 		color: aqua;
-		font-size: larger;
-		margin: 10; 
-		padding: 10;
+	
 	}
+
 
 </style>
 </head>
@@ -33,8 +32,10 @@ body
 
 <body ng-app="myApp" ng-controller="myCtrl">
 <form action="/MyObsession/">
+<div class="container" align="center">
+<h1>My Cart</h1>
+</div>
 <table align ="center" border="7">
-<caption>My Cart</caption>
 <th>Cart_ID</th>
 <th>Product ID</th>
 <th>Product_Name</th>
@@ -56,16 +57,18 @@ body
 
 </tr>
 </table>
-<input type="submit" value="Continue Shopping">
-
+<div class="container" align="center">
+<br><br><input type="submit" value="Continue Shopping"><br><br>
+</div>
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.list=${pr}
 });
 </script>
-
+<div class="container" align="center">
 <a href="/MyObsession/buynow">Buy Now</a>
+</div>
 </form>
 </body>
 </html>
