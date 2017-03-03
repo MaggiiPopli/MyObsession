@@ -24,7 +24,7 @@ public class ShippingAddress implements Serializable{
 	 private String locality;
 	 private String city;
 	 private String state;
-	 private int contact;
+	 private String contact;
 	
 	 
 	 
@@ -70,10 +70,10 @@ public class ShippingAddress implements Serializable{
 	public void setState(String state) {
 		this.state = state;
 	}
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 	@Override

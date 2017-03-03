@@ -22,7 +22,7 @@ public class OrdersDAOImpl implements OrdersDAO {
 	{
 		this.sessionFactory=sessionFactory;
 		
-	}
+	} 
 
 	public void saveOrders(Orders o) {
 		// TODO Auto-generated method stub

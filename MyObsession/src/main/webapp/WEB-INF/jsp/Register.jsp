@@ -45,22 +45,22 @@ ${msg}
                 
                 <div class="form-group">
 				<label>Name</label>
-                 <F:input path="name" id="name" placeholder="Name" class="form-control" />
+                <F:input path="name" placeholder="Name" class="form-control" />
                  </div>
                  
                  <div class="form-group">
 				<label>Username</label>
                 <F:input path="username" placeholder="Username" class="form-control" />
                 </div> 
-                
+                 
                 <div class="form-group">
 				<label>Email-ID</label>
                 <F:input path="email" placeholder="Email" class="form-control" />
                 </div>
                  
                 <div class="form-group">
-				<label>Gender</label>
-                <F:radiobutton path="gender" value="Male"/>Male&nbsp;
+				<label>Gender</label><br>
+                <F:radiobutton path="gender" value="Male"/>Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <F:radiobutton path="gender" value="Female"/>Female<br>
                 </div>
                 

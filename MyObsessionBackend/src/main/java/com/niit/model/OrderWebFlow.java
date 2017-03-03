@@ -15,6 +15,7 @@ public class OrderWebFlow {
 	
 	@Autowired
 	CartDAOImpl cartDAOImpl;
+	String usr;
 
 		 public Orders initFlow()
 		 {
@@ -25,6 +26,7 @@ public class OrderWebFlow {
 		 public String addShippingAddress(Orders orders, ShippingAddress shippingAddress)
 		 {
 			 orders.setSa(shippingAddress);
+			 usr=shippingAddress.getName();
 			 return "success";
 		 }
 		 
@@ -38,7 +40,7 @@ public class OrderWebFlow {
 		 {
 			 ordersDAOImpl.saveOrders(orders);
 			 System.out.println("Orders"+orders);
-			 cartDAOImpl.cartFinal("hasit03");
+			 cartDAOImpl.cartFinal(usr);
 			 return "success";
 		 }
 		 

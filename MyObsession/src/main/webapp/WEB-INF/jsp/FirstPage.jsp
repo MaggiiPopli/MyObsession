@@ -50,17 +50,22 @@ body
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="http://www.nykaa.com/media/wysiwyg/Loreal_Artistry_Hp_Sliding_Banner_G7.png" alt=>
+        <img src="http://www.nykaa.com/media/bannerpro/d7.jpg" alt=>
               
       </div>
 
+	<div class="item">
+	<img src="http://www.nykaa.com/media/bannerpro/MAYBELLINE_HPSlidingBanner_desktop_05.jpg" alt=>
+	</div>
+
       <div class="item">
-        <img src="http://www.nykaa.com/media/bannerpro/d7.jpg" alt=>
+        <img src="http://www.nykaa.com/media/wysiwyg/Loreal_Artistry_Hp_Sliding_Banner_G7.png" alt=>
               
       </div>
       <div class="item">

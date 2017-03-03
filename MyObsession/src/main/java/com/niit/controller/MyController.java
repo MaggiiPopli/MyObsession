@@ -93,10 +93,11 @@ public class MyController {
 		ModelAndView mv = new ModelAndView("FirstPage");
 		return mv;
 	}
+	
 	@RequestMapping("/sign-up")
 	public ModelAndView register()
 	{
-		ModelAndView mv= new ModelAndView("Register");
+		ModelAndView mv= new ModelAndView("Register","command",new User());
 		return mv;
 	}
 	
