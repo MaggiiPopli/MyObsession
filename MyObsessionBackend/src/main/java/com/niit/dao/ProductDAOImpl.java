@@ -64,21 +64,13 @@ public class ProductDAOImpl implements ProductDAO{
 	
 	}
 
-	public boolean saveProduct(Product p) {
+	public void saveProduct(Product p) {
 		// TODO Auto-generated method stub
-		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		sess.save(p);
 		tx.commit();
 		//sess.close();
-		return true;
-		}
-		catch(Exception ex)
-		{
-			System.out.println("Exception"+ex);
-			return false;
-		}
 		
 	}
 
@@ -92,22 +84,15 @@ public class ProductDAOImpl implements ProductDAO{
 		sess.close();
 	}
 
-	public boolean deleteProduct(String product_id) {
+	public void deleteProduct(String product_id) {
 		// TODO Auto-generated method stub
-		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		Product p=(Product) sess.get(Product.class, product_id);
 		sess.delete(p);
 		tx.commit();
 		sess.close();
-		return true;
-		}
-		catch(Exception e)
-		{
-			System.out.println("Exception occurred"+e);
-			return false;
-		}
+
 	}
 
 	public Product getProductById(String product_id) {
@@ -118,24 +103,13 @@ public class ProductDAOImpl implements ProductDAO{
 		return p;
 	}
 
-	public boolean updateProduct(Product p) {
+	public void updateProduct(Product p) {
 		// TODO Auto-generated method stub
-		
-		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		sess.update(p);
 		tx.commit();
 		sess.close();
-		return true;
-		}
-		
-		catch(Exception ex)
-		{
-			System.out.println("Exception occurred"+ex);
-			return false;
-		}
-		
 	}
 
 	public List<Category> getCategoryname() {

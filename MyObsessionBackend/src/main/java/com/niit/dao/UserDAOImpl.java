@@ -17,7 +17,7 @@ public class UserDAOImpl implements UserDAO{
 	
 	@Autowired
 	SessionFactory sessionFactory; 
-	 
+	
 	
 	public UserDAOImpl(SessionFactory sessionFactory)
 	{
@@ -40,34 +40,27 @@ public class UserDAOImpl implements UserDAO{
 		Query q=sessionFactory.openSession().createQuery(hql);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
+	
 		List<User> l=q.list();
 		if(l.size()>0)
 		{
 			return true;
 		}
 		else
-	 	{
+		{
 			return false;
 		}
 	
 	}
 
-	public boolean save(User u) {
+	public void save(User u) {
 		// TODO Auto-generated method stub
-		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		System.out.println("user data"+u);
 		sess.persist(u);
 		tx.commit();
 		sess.close();
-		return true;
-		}
-		catch(Exception e)
-		{
-			System.out.println("Exception occured "+e);
-			return false;
-		}
 	}
  }
 

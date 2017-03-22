@@ -9,13 +9,13 @@ public interface CategoryDAO {
 
 	public List<Category> viewCategory();
 
-	public boolean saveCategory(Category c);
+	public void saveCategory(Category c);
 	
 	public void editCategory(String category_id);
 	
-	public boolean deleteCategory(String category_id);
+	public void deleteCategory(String category_id);
 	
 	public Category getCategoryById(String category_id);
 	
-	public boolean updateCategory(Category c);
+	public void updateCategory(Category c);
 }

@@ -71,7 +71,7 @@ ${msg}
                 
                 <div class="form-group">
 				<label>Password</label>
-                <F:password path="password" placeholder="Password" class="form-control" />
+                <F:input path="password" placeholder="Password" class="form-control" />
                 </div>
                 
                 <div class="form-group">
