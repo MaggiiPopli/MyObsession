@@ -23,6 +23,7 @@ public class Product {
 	private String description;
 	private String category_name;
 	private String supplier_name;
+	
 	@Transient
 	private MultipartFile image;
 	
