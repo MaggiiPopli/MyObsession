@@ -6,5 +6,5 @@ public interface UserDAO {
 	
 	public boolean validate(String username, String password);
 
-	public void save(User u);
+	public boolean save(User u);
 }

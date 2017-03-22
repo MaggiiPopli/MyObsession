@@ -48,13 +48,21 @@ public class SupplierDAOImpl implements SupplierDAO{
 
 	}
 
-	public void saveSupplier(Supplier s) {
+	public boolean saveSupplier(Supplier s) {
 		// TODO Auto-generated method stub
+		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		sess.save(s);
 		tx.commit();
 		sess.close();
+		return true;
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Exception"+ex);
+			return false;
+		}
 	
 	}
 
@@ -68,14 +76,21 @@ public class SupplierDAOImpl implements SupplierDAO{
 		sess.close();
 	}
 
-	public void deleteSupplier(String supplier_id) {
+	public boolean deleteSupplier(String supplier_id) {
 		// TODO Auto-generated method stub
+		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		Supplier s=(Supplier) sess.get(Supplier.class, supplier_id);
 		sess.delete(s);
 		tx.commit();
 		sess.close();
+		return true;
+		}
+		catch(Exception e){
+			System.out.println("Exception"+e);
+			return false;
+		}
 	}
 
 	public Supplier getSupplierById(String supplier_id) {
@@ -85,13 +100,20 @@ public class SupplierDAOImpl implements SupplierDAO{
 		return s;
 	}
 
-	public void updateSupplier(Supplier s) {
+	public boolean updateSupplier(Supplier s) {
 		// TODO Auto-generated method stub
+		try{
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		sess.update(s);
 		tx.commit();
 		sess.close();
+		return true;
+		}
+		catch(Exception ex){
+			System.out.println("Exception"+ex);
+			return false;
+		}
 
 	}
 

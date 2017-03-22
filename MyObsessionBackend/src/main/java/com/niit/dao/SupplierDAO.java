@@ -8,15 +8,15 @@ public interface SupplierDAO {
 	
 	public List<Supplier> viewSupplier();
 
-	public void saveSupplier(Supplier s);
+	public boolean saveSupplier(Supplier s);
 	
 	public void editSupplier(String supplier_id);
 	
-	public void deleteSupplier(String supplier_id);
+	public boolean deleteSupplier(String supplier_id);
 	
 	public Supplier getSupplierById(String supplier_id);
 	
-	public void updateSupplier(Supplier s);
+	public boolean updateSupplier(Supplier s);
 
 
 }

@@ -16,14 +16,14 @@ public interface ProductDAO {
 	
 	public List<Supplier> getSuppliername();
 
-	public void saveProduct(Product p);
+	public boolean saveProduct(Product p);
 	
 	public void editProduct(String product_id);
 	
-	public void deleteProduct(String product_id);
+	public boolean deleteProduct(String product_id);
 	
 	public Product getProductById(String product_id);
 	
-	public void updateProduct(Product p);
+	public boolean updateProduct(Product p);
 	
 }
