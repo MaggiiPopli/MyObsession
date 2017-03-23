@@ -2,10 +2,13 @@ package com.niit.dao;
 
 import java.util.List;
 
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -13,8 +16,13 @@ import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.model.Supplier;
 
+
+
 @Repository
 public class ProductDAOImpl implements ProductDAO{
+	
+	
+	private static Logger log = LoggerFactory.getLogger(ProductDAOImpl.class);
   
 	@Autowired
 	SessionFactory sessionFactory; 
@@ -34,6 +42,8 @@ public class ProductDAOImpl implements ProductDAO{
 
 	public List<Product> viewProduct() {
 		// TODO Auto-generated method stub
+		log.debug("starting of method viewproduct");
+
 		Session sess=sessionFactory.openSession();
 		Transaction tx=sess.beginTransaction();
 		String hql="from Product";
@@ -42,7 +52,8 @@ public class ProductDAOImpl implements ProductDAO{
 		
 		List<Product> l=q.list();
 		System.out.println("LIST PRODUCT"+l);
-		
+		log.debug("ending of method viewproduct");
+
 		return l;
 	
 	}

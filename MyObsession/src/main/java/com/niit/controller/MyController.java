@@ -5,6 +5,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,6 +23,8 @@ import com.niit.model.User;
 @Controller
 public class MyController { 
 	
+	
+	private static Logger log = LoggerFactory.getLogger(MyController.class);
 	
 	//UserDAOImpl userDAOImpl=new UserDAOImpl();
 	
@@ -78,8 +82,11 @@ public class MyController {
 	@RequestMapping("/sign-in")
 	public ModelAndView login()
 	{
+		log.debug("Start Sign-in Page");
 		ModelAndView mv = new ModelAndView("Login");
+		log.debug("End Sign-in Page");
 		return mv;
+		
 	}
 	
 

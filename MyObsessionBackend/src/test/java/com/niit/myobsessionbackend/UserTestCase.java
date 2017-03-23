@@ -7,7 +7,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.niit.dao.UserDAO;
+
+import com.niit.dao.UserDAOImpl;
 import com.niit.model.User;
 
 
@@ -21,7 +22,7 @@ public class UserTestCase {
 	static User user;
 	
 	@Autowired
-	static UserDAO userDAO;
+	static UserDAOImpl userDAOImpl;
 	
 	@BeforeClass
 	public static void init()
@@ -29,7 +30,7 @@ public class UserTestCase {
 		context=new AnnotationConfigApplicationContext();
 		context.scan("com");
 		context.refresh();
-		userDAO=(UserDAO)context.getBean("userDAO");
+		userDAOImpl=(UserDAOImpl)context.getBean("userDAOImpl");
 		user=(User)context.getBean("user");
 		System.out.println("Objects created successfully");
 	
@@ -46,19 +47,19 @@ public class UserTestCase {
 		user.setGender("Male");
 		user.setAddress("New Delhi");
 		System.out.println("Create User");
-		boolean status=userDAO.save(user);
+		boolean status=userDAOImpl.save(user);
 		Assert.assertEquals("create user Test Case", true, status);
 		
 	}
 
 	@Test
-	public void updateUsertestCase()
+	public void validateUsertestCase()
 	{
 		user.setUsername("hasit03");
 		user.setPassword("qwerty");
 		String username=user.getUsername();
 		String password=user.getPassword();
-		boolean status=userDAO.validate(username, password);
+		boolean status=userDAOImpl.validate(username, password);
 		Assert.assertEquals("Update User Test Case", true, status);
 	}
 	
