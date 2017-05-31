@@ -29,7 +29,7 @@ body
 .navbar {
       margin-bottom: 5;
       border-radius: 0;
-     background: url('https://theknockturnal.com/wp-content/uploads/2016/05/pro_cms.jpg')no-repeat center fixed;
+     background: url('http://cometrend.com/wp-content/uploads/2016/06/pro_cms.jpg')no-repeat center fixed;
     }
     
     p

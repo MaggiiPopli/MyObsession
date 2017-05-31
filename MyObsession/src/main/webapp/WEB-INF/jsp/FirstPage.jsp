@@ -14,7 +14,7 @@ body
     .navbar {
       margin-bottom: 5;
       border-radius: 0;
-     background: url('https://theknockturnal.com/wp-content/uploads/2016/05/pro_cms.jpg')no-repeat center fixed;
+     background: url('http://cometrend.com/wp-content/uploads/2016/06/pro_cms.jpg')no-repeat center fixed;
     }
     
     
@@ -43,6 +43,7 @@ body
   </head>
 <body>
 <c:import url="/header"></c:import>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -97,7 +98,7 @@ body
       
     </div>
     <div class="col-sm-4"> 
-      <img src="http://btcosmetic.com/en/wp-content/uploads/sites/2/2014/11/Mac-Cosmetics_color-makeup.jpg" style="width:100%; height:50%" alt="Image">    
+      <img src="http://swatchandreview.com/wp-content/uploads/2014/10/MAC-Cosmetics-Heirloom-Mix-Holiday-2014-collection.jpg" style="width:100%; height:50%" alt="Image">    
     </div>
     <div class="col-sm-4">
       <img src= "http://angelajonsson.com/wp-content/uploads/2014/06/angelajonsson-lakme-ad-2014.jpg" class="image-responsive" style="width:100%;height:50%" alt="image">

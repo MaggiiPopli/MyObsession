@@ -78,6 +78,12 @@ public class MyController {
 		return mv;
 	}
 	
+	@RequestMapping("/contact")
+	public ModelAndView contact()
+	{
+		ModelAndView mv=new ModelAndView("ContactUs");
+		return mv;
+	}
 	
 	@RequestMapping("/sign-in")
 	public ModelAndView login()
@@ -149,7 +155,7 @@ public class MyController {
 		}
 	}
 	@RequestMapping("/register")
-	public ModelAndView ModelAndView (@ModelAttribute User u)
+	public ModelAndView ModelAndView(@ModelAttribute User u)
 	{
 		System.out.println("inside register controller "+u);
 		u.setRole("role_user");

@@ -19,7 +19,7 @@
     .navbar {
       margin-bottom: 5;
       border-radius: 0;
-     background: url('https://theknockturnal.com/wp-content/uploads/2016/05/pro_cms.jpg')no-repeat center fixed;
+     background: url('http://cometrend.com/wp-content/uploads/2016/06/pro_cms.jpg')no-repeat center fixed;
     }
   
   
@@ -33,7 +33,7 @@
       <a class="navbar-brand" style="color:white" href="#">MyObsession</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a style="color:white" href="#">Home</a></li>
+      <li><a style="color:white" href="/MyObsession/">Home</a></li>
       
        
       <li class="dropdown">
@@ -61,6 +61,7 @@
       <li><a style="color:white" href="#">Offers</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+    <li><a style="color:white" href="contact"> <span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
     <li><a style="color:white" href="Admin"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
      <c:if test="${empty username}">
      
